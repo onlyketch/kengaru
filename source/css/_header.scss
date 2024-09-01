@@ -1,0 +1,105 @@
+.header {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    padding: 12px 24px;
+    z-index: 30 !important;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__left {
+        display: flex;
+        align-items: center;
+        margin-left: 55px;
+    }
+
+    &__logo {
+        width: 132px;
+        height: 42px;
+
+        .data__icon {
+            width: 132px;
+            height: 42px;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        margin-left: 87px;
+
+        &-item {
+            margin-right: 24px;
+
+            a {
+                text-decoration: none;
+                font-size: 12px;
+                line-height: 24px;
+                color: $mainblack;
+                transition: all .3s ease-out;
+
+                &:not(.active):hover {
+                    opacity: 0.4;
+                }
+            }
+
+            a.active {
+                font-family: "Inter Medium", Arial, Helvetica, sans-serif;
+            }
+
+            &:last-child {
+                margin-right: 0; 
+            }
+            
+        }
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+        margin-right: 55px;
+    }
+
+    &__phone {
+        text-decoration: none;
+        font-family: "Inter Medium", Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        line-height: 24px;
+        color: $mainblack;
+        margin-right: 24px;
+    }
+
+    &__btn-menu {
+        box-sizing: border-box;
+        border: 1px solid #F4F4F4;
+        outline: none;
+        appearance: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: $mainblack;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        
+        &-lines {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 12px;
+            height: 4px;
+        }
+
+        &-line {
+            height: 1px;
+            background-color: #FFFFFF;
+        }
+    }
+}
+

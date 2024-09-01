@@ -1,0 +1,98 @@
+.footer {
+    padding-top: 96px;
+    padding-bottom: 38px;
+    background-color: #FFFFFF;
+    margin-top: 120px;
+
+    &__title {
+        font-family: "Recoleta Medium", Arial, Helvetica, sans-serif;
+        font-size: 180px;
+        line-height: 180px;
+        color: $purple;
+    }
+
+    &__phone {
+        display: block;
+        text-decoration: none;
+        font-family: "Inter Medium", Arial, Helvetica, sans-serif;
+        font-size: 48px;
+        line-height: 48px;
+        color: $mainblack;
+        margin-top: 260px;
+    }
+
+    &__address {
+        font-family: "Inter Medium", Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        line-height: 26px;
+        color: $mainblack;
+        margin-top: 32px;
+    }
+
+    &__email {
+        text-decoration: none;
+        font-family: "Inter Medium", Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        line-height: 26px;
+        color: $purple;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    &__nav {
+        display: flex;
+    }
+
+    &__nav-item {
+        margin-right: 24px;
+
+        &:last-child {
+            margin-right: 0; 
+        }
+
+        a {
+            text-decoration: none;
+            font-family: "Inter", Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            line-height: 24px;
+            color: $mainblack;
+            transition: all .3s ease-out;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+    }
+
+    &__social-item {
+        text-decoration: none;
+        display: block;
+        width: 68px;
+        height: 68px;
+        border-radius: 50%;
+        background-color: #F0F0F2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 4px;
+
+        &:last-child {
+            margin-right: 0; 
+        }
+
+        .data__icon {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
+

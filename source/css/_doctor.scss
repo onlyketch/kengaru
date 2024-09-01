@@ -1,0 +1,110 @@
+.doctor {
+    position: relative;
+    z-index: 20;
+    margin-top: 20px;
+
+    &__wrapper {
+        position: relative;
+        background-color: #FDFDFD;
+        border-radius: 64px;
+        height: 574px;
+        box-sizing: border-box;
+        padding: 116px 92px 50px 92px;
+        overflow: hidden;
+    }
+
+    &__back-link {
+        text-decoration: none;
+        color: $gray60;
+        font-family: "Inter Medium", Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        line-height: 16px;
+        transition: all .3s ease-out;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__name {
+        font-family: "Recoleta Medium", Arial, Helvetica, sans-serif;
+        font-size: 40px;
+        line-height: 42px;
+        color: $purple;
+        max-width: 380px;
+        margin-top: 36px;
+    }
+
+    &__position {
+        font-family: "Inter Medium", Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        color: $mainblack;
+        margin-top: 16px;
+    }
+
+    &__exp {
+        
+        margin-top: 114px;
+
+        &-years {
+            font-family: "Recoleta Medium", Arial, Helvetica, sans-serif;
+            font-size: 40px;
+            line-height: 42px;
+            color: $purple;
+        }
+        &-sign {
+            margin-top: 4px;
+            color: $gray60;
+        }
+    }
+
+    &__tags {
+        display: flex;
+        margin-top: 24px;
+    }
+
+    &__tag {
+        display: flex;
+        padding: 8px 12px;
+        border: 1px solid #E9E9E9;
+        border-radius: 64px;
+        margin-right: 8px;
+
+        &:last-child {
+            margin-right: 0; 
+        }
+
+        &-bull {
+            width: 16px;
+            height: 16px;
+            background: radial-gradient(95.03% 95.03% at 89.83% 58.15%, #DB6BD7 0%, rgba(255, 255, 255, 0) 100%);
+            border-radius: 36px;
+            transform: rotate(180deg);
+        }
+
+        &-text {
+            font-family: "Inter Medium", Arial, Helvetica, sans-serif;
+            font-size: 10px;
+            line-height: 16px;
+            color: $mainblack;
+            margin-left: 4px;
+        }
+    }
+
+    &__image {
+        position: absolute;
+        bottom: 0;
+        right: 15%;
+        width: 333px;
+        height: 475px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+}
+
+

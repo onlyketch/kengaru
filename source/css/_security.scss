@@ -52,6 +52,11 @@
             line-height: 46px;
             margin-top: 114px;
         }
+
+        @media (max-width: 358px) {
+            font-size: 32px;
+            line-height: 38px; 
+        }
     }
 
     &__subtitle {

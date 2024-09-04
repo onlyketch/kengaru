@@ -166,9 +166,10 @@
     }
 
     &__image-mob {
+        display: none;
         position: relative;
-        width: 240px;
-        height: 342px;
+        width: 62%; //240
+        height: auto; //342
         z-index: 10;
         top: 35px;
         margin: 0 auto;
@@ -176,6 +177,10 @@
         img {
             width: 100%;
             height: 100%;
+        }
+
+        @media (max-width: 1023px) {
+            display: block;
         }
     }
 

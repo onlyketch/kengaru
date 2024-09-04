@@ -22,6 +22,7 @@
 
         @media (max-width: 1023px) {
             padding: 32px 28px;
+            border-radius: 32px;
         }
     }
 
@@ -62,6 +63,15 @@
         z-index: 40;
         background: linear-gradient(180deg, #FDFDFD 48.22%, rgba(253, 253, 253, 0) 94.89%);
         pointer-events: none;
+
+        @media (max-width: 1023px) {
+            height: 111px;
+            left: 0;
+            right: 0;
+            transform: translateX(0);
+            width: auto;
+            border-radius: 32px;
+        }
     }
 
     &__item {
@@ -98,10 +108,11 @@
             flex-shrink: 0;
             margin-right: 12px;
             transition: all .3s ease-out;
-        }
 
-        &-info {
-
+            @media (max-width: 358px) {
+                width: 40px;
+                height: 40px;
+            }
         }
 
         &-name {
@@ -209,6 +220,10 @@
         &.active &-square {
             background-color: #DE80FF;
             color: #FFFFFF;
+        }
+
+        @media (max-width: 358px) {
+            max-height: 150px;
         }
 
     }

@@ -6,6 +6,10 @@
     &__wrapper {
         display: flex;
         width: 100%;
+
+        @media (max-width: 1023px) {
+            flex-direction: column;
+        }
     }
 
     &__vector {
@@ -20,12 +24,28 @@
 
         h2 {
             margin-left: 48px;
+
+            @media (max-width: 1023px) {
+                margin-left: 28px;
+            }
+        }
+
+        @media (max-width: 1023px) {
+            width: 100%;
+            max-width: 100%;
+            padding-top: 32px;
+            padding-bottom: 84px;
+            border-radius: 32px;
         }
     }
 
     &__vector-sliders {
         margin-top: 80px;
         user-select: none;
+
+        @media (max-width: 1023px) {
+            margin-top: 64px;
+        }
     }
 
     &__vector-wrapper {
@@ -61,6 +81,11 @@
             height: 30px;
             background: linear-gradient(154.44deg, #939393 24.87%, rgba(255, 255, 255, 0) 103.07%);
             border-radius: 36px;
+
+            @media (max-width: 1023px) {
+                width: 20px;
+                height: 20px;
+            }
         }
 
         &-text {
@@ -69,7 +94,17 @@
             line-height: 20px;
             color: $mainblack;
             margin-left: 8px;
+
+            @media (max-width: 1023px) {
+                font-size: 12px;
+                line-height: 16px;
+            }
         }
+
+        @media (max-width: 1023px) {
+            padding: 12px;
+        }
+
     }
 
     &__vector-slider-right {
@@ -113,6 +148,18 @@
             img {
                 width: 52px;
                 height: 52px;
+
+                @media (max-width: 1023px) {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+
+            @media (max-width: 1023px) {
+                width: 84px;
+                height: 84px;
+                border-radius: 24px;
+                margin-top: 72px;
             }
         }
 
@@ -123,12 +170,32 @@
             color: $purple;
             margin-top: 20px;
             max-width: 380px;
+
+            @media (max-width: 1023px) {
+                font-size: 14px;
+                line-height: 18px;
+                max-width: 302px;
+            }
         }
 
         &-btn {
             position: absolute;
             top: 36px;
             right: 48px;
+
+            @media (max-width: 1023px) {
+                top: 28px;
+                right: 28px;
+            }
+        }
+
+        @media (max-width: 1023px) {
+            margin-left: 0;
+            margin-top: 12px;
+            width: 100%;
+            max-width: 100%;
+            padding: 32px 28px 36px 28px;
+            border-radius: 32px;
         }
     }
 

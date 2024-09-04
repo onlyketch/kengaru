@@ -5,6 +5,10 @@
 
     &__title {
         margin-left: 30px;
+
+        @media (max-width: 1023px) {
+          margin-left: 10px;
+        }
     }
 
     &__wrapper {
@@ -13,6 +17,11 @@
         background-color: #FDFDFD;
         border-radius: 40px;
         overflow: hidden;
+
+        @media (max-width: 1023px) {
+           border-radius: 32px;
+           padding: 25px 18px 28px 18px;
+        }
     }
 
     &__slider {
@@ -33,6 +42,10 @@
             width: 1px;
             background-color: #A8A8A6;
             margin-right: 8px;
+
+            @media (max-width: 1023px) {
+              margin-right: 4px;
+            }
           }
           
           .line-small {
@@ -53,6 +66,11 @@
             height: 91px;
             background-color: #A52CDF;
             margin-right: 9px;
+
+            @media (max-width: 1023px) {
+              margin-right: 4px;
+              height: 38px;
+            }
           }
           
           .line-holder__bull {
@@ -94,6 +112,10 @@
                 background-position: center;
                 opacity: 0;
                 transition: all .3s ease-out;
+
+                @media (max-width: 1023px) {
+                  display: none;
+                }
             }
 
             &:hover {
@@ -110,6 +132,14 @@
                 object-fit: cover;
                 transform: scale(1.2);
             }
+
+            @media (max-width: 1023px) {
+              width: 50px;
+              height: 50px;
+              border-radius: 16px;
+              top: -47px;
+              left: -25px;
+            }
           }
           
           .line-holder__sign {
@@ -122,6 +152,11 @@
             color: $mainblack;
             text-align: center;
             width: 216px;
+
+            @media (max-width: 1023px) {
+              width: 146px;
+              top: -120px;
+            }
           }
 
           .line-holder__sign.no-table {
@@ -135,7 +170,16 @@
             transform: translatex(-50%);
             white-space: nowrap;
             bottom: -32px;
+            font-size: 16px;
+            line-height: 18px;
             font-weight: bold;
+            color: $mainblack;
+
+            @media (max-width: 1023px) {
+              font-size: 12px;
+              line-height: 18px;
+              bottom: -25px;
+            }
           }
 
           /* OWL CSS */
@@ -158,6 +202,11 @@
           .owl-dots,
           .owl-nav {
             display: none;
+          }
+
+          @media (max-width: 1023px) {
+            margin-top: 0;
+            height: 240px;
           }
     }
 }

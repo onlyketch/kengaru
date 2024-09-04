@@ -16,6 +16,10 @@
         display: flex;
         align-items: center;
         margin-left: 55px;
+
+        @media (max-width: 1023px) {
+            margin-left: 0;
+        }
     }
 
     &__logo {
@@ -25,6 +29,16 @@
         .data__icon {
             width: 132px;
             height: 42px;
+
+            @media (max-width: 1023px) {
+                width: 127px;
+                height: 40px;
+            }
+        }
+
+        @media (max-width: 1023px) {
+            width: 127px;
+            height: 40px;
         }
     }
 
@@ -57,12 +71,20 @@
             }
             
         }
+
+        @media (max-width: 1023px) {
+            display: none;
+        }
     }
 
     &__right {
         display: flex;
         align-items: center;
         margin-right: 55px;
+
+        @media (max-width: 1023px) {
+            margin-right: 0;
+        }
     }
 
     &__phone {
@@ -72,6 +94,10 @@
         line-height: 24px;
         color: $mainblack;
         margin-right: 24px;
+
+        @media (max-width: 1023px) {
+            display: none;
+        }
     }
 
     &__btn-menu {
@@ -83,7 +109,7 @@
         height: 40px;
         border-radius: 50%;
         background-color: $mainblack;
-        display: none; //flex
+        display: none;
         justify-content: center;
         align-items: center;
         cursor: pointer;
@@ -101,6 +127,14 @@
             height: 1px;
             background-color: #FFFFFF;
         }
+
+        @media (max-width: 1023px) {
+            display: flex;
+        }
+    }
+
+    @media (max-width: 1023px) {
+        top: 0;
     }
 }
 

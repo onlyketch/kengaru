@@ -29,10 +29,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let reviewItems = document.querySelectorAll('.reviews__item');
     let reviewTexts = document.querySelectorAll('.reviews__item-text');
+    let reviewItemsImages = document.querySelectorAll('.reviews__item-image');
 
     for (let i = 0; i < reviewItems.length; i++) {
-        reviewItems[i].addEventListener('click', function() {
-            reviewItems[i].classList.toggle('active');
+        reviewItems[i].addEventListener('click', function(e) {
+            console.log(e.target);
+            if (!e.target.classList.contains('reviews-img') && !e.target.classList.contains('reviews__item-image-search-icon')) {
+                reviewItems[i].classList.toggle('active');
+            }
+            
         });
 
     }

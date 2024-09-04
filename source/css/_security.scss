@@ -4,6 +4,10 @@
 
     &__wrapper {
         display: flex;
+
+        @media (max-width: 1023px) {
+            flex-direction: column;
+        }
     }
 
     &__card {
@@ -16,6 +20,14 @@
         width: 50%;
         max-width: 546px;
         margin-right: 6px;
+
+        @media (max-width: 1023px) {
+            width: 100%;
+            max-width: 100%;
+            margin-right: 0;
+            padding: 32px 28px 36px 28px;
+            border-radius: 32px; 
+        }
     }
 
     &__title {
@@ -34,6 +46,12 @@
             font-size: 50px;
             line-height: 56px;
         }
+
+        @media (max-width: 1023px) {
+            font-size: 40px;
+            line-height: 46px;
+            margin-top: 114px;
+        }
     }
 
     &__subtitle {
@@ -43,12 +61,23 @@
         color: $purple;
         margin-top: 20px;
         max-width: 340px;
+
+        @media (max-width: 1023px) {
+            font-size: 14px;
+            line-height: 18px;
+            margin-top: 16px;
+        }
     }
 
     &__btn-order {
         position: absolute;
         top: 36px;
         right: 48px;
+
+        @media (max-width: 1023px) {
+            top: 28px;
+            right: 28px;
+        }
     }
 
     &__slider {
@@ -89,6 +118,10 @@
             justify-content: space-between;
             padding: 0 40px;
             box-sizing: border-box;
+
+            @media (max-width: 1023px) {
+                padding: 0 28px;
+            }
         }
 
         .owl-next, .owl-prev {
@@ -116,6 +149,15 @@
 
         .owl-prev {
             background-image: url('../images/slider-arrow-left.svg');
+        }
+
+        @media (max-width: 1023px) {
+            width: 100%;
+            max-width: 100%;
+            margin-left: 0;
+            margin-top: 12px;
+            border-radius: 32px;
+            height: 300px; 
         }
 
     }

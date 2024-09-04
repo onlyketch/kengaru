@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         autoplaySpeed: 3000,
         autoplayTimeout: 3000,
         autoplayHoverPause: true,
+        autoWidth: true
     });
 
     $(".security__slider").owlCarousel({
@@ -22,6 +23,21 @@ document.addEventListener('DOMContentLoaded', function() {
     Fancybox.bind("[data-fancybox]", {
         // Your custom options
     });
+
+
+    //Reviews
+
+    let reviewItems = document.querySelectorAll('.reviews__item');
+    let reviewTexts = document.querySelectorAll('.reviews__item-text');
+
+    for (let i = 0; i < reviewItems.length; i++) {
+        reviewItems[i].addEventListener('click', function() {
+            reviewItems[i].classList.toggle('active');
+        });
+
+    }
+
+    
 
     
     

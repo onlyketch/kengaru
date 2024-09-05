@@ -157,19 +157,28 @@
         justify-content: center;
         align-items: center;
         margin-right: 4px;
+        transition: all .3s ease-out;
 
         &:last-child {
             margin-right: 0; 
         }
 
-        .data__icon {
-            width: 24px;
-            height: 24px;
+        svg {
+            fill: #292824;
+            transition: all .3s ease-out;
 
             @media (max-width: 358px) {
                 width: 18px;
                 height: 18px;
             }
+        }
+
+        &:hover {
+            background-color: $purple;
+        }
+
+        &:hover svg {
+            fill: #FFFFFF;
         }
 
         @media (max-width: 358px) {
@@ -180,7 +189,7 @@
 
     @media (max-width: 1023px) {
         margin-top: 86px;
-        padding: 49px 23px 23px 23px;
+        padding: 49px 0 23px 0;
     }
 }
 

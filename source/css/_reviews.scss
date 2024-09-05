@@ -40,7 +40,9 @@
         scrollbar-width: none;
 
         &::-webkit-scrollbar {
+            -webkit-appearance: none;
             width: 0px;
+            height: 0;
             background: transparent;
         }
 
@@ -61,7 +63,7 @@
         transform: translateX(-50%);
         height: 20%;
         z-index: 40;
-        background: linear-gradient(180deg, #FDFDFD 48.22%, rgba(253, 253, 253, 0) 94.89%);
+        background: linear-gradient(rgb(253, 253, 253) 48.22%, rgba(252, 252, 252, 0) 94.89%);
         pointer-events: none;
 
         @media (max-width: 1023px) {

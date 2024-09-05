@@ -31,11 +31,13 @@
         }
 
         @media (max-width: 1023px) {
+            margin-top: 12px;
             width: 100%;
             max-width: 100%;
             padding-top: 32px;
             padding-bottom: 84px;
             border-radius: 32px;
+            order: 2;
         }
     }
 
@@ -57,11 +59,11 @@
         align-items: center;
 
         &.one {
-            animation: first-loop 8s linear infinite;
+            animation: first-loop 14s linear infinite;
         }
 
         &.second {
-            animation: loop 8s linear infinite;
+            animation: loop 14s linear infinite;
         }
 
     }
@@ -113,12 +115,12 @@
         margin-top: 12px;
 
         &.one {
-            animation: first-loop 8s linear infinite;
+            animation: first-loop 14s linear infinite;
             animation-direction: reverse;
         }
 
         &.second {
-            animation: loop 8s linear infinite;
+            animation: loop 14s linear infinite;
             animation-direction: reverse;
         }
 
@@ -160,6 +162,7 @@
                 height: 84px;
                 border-radius: 24px;
                 margin-top: 72px;
+                order: 1;
             }
         }
 
@@ -191,7 +194,7 @@
 
         @media (max-width: 1023px) {
             margin-left: 0;
-            margin-top: 12px;
+            margin-top: 0;
             width: 100%;
             max-width: 100%;
             padding: 32px 28px 36px 28px;

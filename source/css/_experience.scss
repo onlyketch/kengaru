@@ -32,6 +32,7 @@
         min-width: 0;
         user-select: none;
         align-items: center;
+        touch-action: manipulation;
 
         &-item {
             display: flex;
@@ -142,6 +143,10 @@
               top: -47px;
               left: -25px;
               filter: none;
+
+              &:hover {
+                transform: none;
+              }
             }
           }
           

@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         autoplaySpeed: 3000,
         autoplayTimeout: 3000,
         autoplayHoverPause: true,
-        autoWidth: true
+        autoWidth: true,
     });
 
     $(".security__slider").owlCarousel({
@@ -76,12 +76,6 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.classList.remove('overflow-hidden');
         });
     }
-
-    
-
-    
-    
-
 
 
 });

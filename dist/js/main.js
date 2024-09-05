@@ -24,12 +24,23 @@ document.addEventListener('DOMContentLoaded', function() {
         // Your custom options
     });
 
+    // Header Navigation
+
+    let headerNavlinks = document.querySelectorAll('.header__nav-item > a');
+
+    for (let i = 0; i < headerNavlinks.length; i++) {
+        headerNavlinks[i].addEventListener('click', function() {
+            for (let j = 0; j < headerNavlinks.length; j++) {
+                headerNavlinks[j].classList.remove('active');
+            }
+            headerNavlinks[i].classList.add('active');
+        });
+    }
+
 
     //Reviews
 
     let reviewItems = document.querySelectorAll('.reviews__item');
-    let reviewTexts = document.querySelectorAll('.reviews__item-text');
-    let reviewItemsImages = document.querySelectorAll('.reviews__item-image');
 
     for (let i = 0; i < reviewItems.length; i++) {
         reviewItems[i].addEventListener('click', function(e) {
@@ -40,6 +51,30 @@ document.addEventListener('DOMContentLoaded', function() {
             
         });
 
+    }
+
+    // Mob Menu
+
+    let headerBtnMenu = document.querySelector('.header__btn-menu');
+    let mobileMenu = document.querySelector('.mobile-menu');
+    let mobileMenuLinks = document.querySelectorAll('.mobile-menu__nav-item > a');
+    let mobileMenuClose = document.querySelector('.mobile-menu__close');
+
+    headerBtnMenu.addEventListener('click', function() {
+        mobileMenu.classList.add('visible');
+        document.body.classList.add('overflow-hidden');
+    });
+
+    mobileMenuClose.addEventListener('click', function() {
+        mobileMenu.classList.remove('visible');
+        document.body.classList.remove('overflow-hidden');
+    });
+
+    for (let i = 0; i < mobileMenuLinks.length; i++) {
+        mobileMenuLinks[i].addEventListener('click', function() {
+            mobileMenu.classList.remove('visible');
+            document.body.classList.remove('overflow-hidden');
+        });
     }
 
     

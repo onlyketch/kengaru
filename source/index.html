@@ -24,7 +24,7 @@
             </div>
             <div class="header__right">
                 <a href="tel:+70000000000" class="header__phone">+7 000 000 00 00</a>
-                <button class="header__btn-order btn-default">Записаться</button>
+                <button class="header__btn-order btn-default order-button">Записаться</button>
                 <button class="header__btn-menu">
                     <div class="header__btn-menu-lines">
                         <div class="header__btn-menu-line"></div>
@@ -551,7 +551,7 @@
                 <img src="images/mob-menu-logo.svg" alt="KengaRu">
             </div>
             <div class="mobile-menu__btns">
-                <button class="btn-default btn-mob">Записаться</button>
+                <button class="mobile-menu__order btn-default btn-mob order-button">Записаться</button>
                 <button class="mobile-menu__close"></button>
             </div>
         </div>
@@ -568,6 +568,27 @@
             <a href="tel:+74957255207" class="mobile-menu__phone">+7 495 725 52 07</a>
             <div class="mobile-menu__address">Москва, ул. Беломорская, д. 18А</div>
             <a href="mailto:hello@kengaruclinic.ru" class="mobile-menu__mail">hello@kengaruclinic.ru</a>
+        </div>
+    </div>
+
+    <div class="order-form">
+        <div class="order-form__overlay"></div>
+        <div class="order-form__body">
+            <form class="order-form__form">
+                Хочу записаться на&nbsp;прием к&nbsp;врачу. Меня зовут <span id="order-name" class="order-form__input" contenteditable="true">введите имя</span>. Можете связаться со&nbsp;мной по&nbsp;телефону:<br><span id="order-phone" class="order-form__input" contenteditable="true">+7 000 000 00 00</span>
+                <br>Хочу добавить, что&nbsp;<span id="order-comment" class="order-form__input" contenteditable="true">введите комментарий</span>
+                <input type="hidden" name="order-name" value="">
+                <input type="hidden" name="order-phone" value="">
+                <input type="hidden" name="order-comment" value="">
+                <input type="submit" class="btn-default order-form__submit" value="Записаться">
+            </form>
+            <button class="order-form__close"></button>
+        </div>
+        <div class="order-form__success">
+            <div class="order-form__form">
+                Спасибо! Скоро мы c вами свяжемся
+            </div>
+            <button class="order-form__success-close"></button>
         </div>
     </div>
 

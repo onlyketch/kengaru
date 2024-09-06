@@ -1,0 +1,103 @@
+.order-form {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 500;
+
+    &__overlay {
+        width: 100%;
+        height: 100%;
+        background: rgba(4, 5, 20, 0.8);
+    }
+
+    &__body, &__success {
+        position: absolute;
+        top: 24px;
+        right: -100%; //24px
+        visibility: hidden;
+        background-color: #FFFFFF;
+        padding: 72px 91px;
+        border-radius: 40px;
+        box-sizing: border-box;
+        max-width: 637px;
+        margin-left: 16px;
+        transition: right .5s ease-out;
+
+        &.show {
+            right: 24px;
+
+            @media (max-width: 1023px) {
+                right: 16px;
+            }
+        }
+
+        &.visible {
+            visibility: visible;
+        }
+
+        @media (max-width: 1023px) {
+            top: 16px;
+            padding: 72px 28px 72px 28px;
+            max-width: 358px;
+            border-radius: 32px;
+        }
+    }
+
+    &.show {
+        visibility: visible;
+    }
+
+    &__form {
+        font-family: "Recoleta Medium", Arial, Helvetica, sans-serif;
+        font-size: 32px;
+        line-height: 40px;
+        color: $purple;
+
+        @media (max-width: 1023px) {
+            font-size: 24px;
+            line-height: 30px;
+        }
+    }
+
+    &__input {
+        color: #DDD2E5;
+        caret-color: $purple;
+
+        &.active {
+           color: $purple;
+        }
+    }
+
+    &__submit {
+        display: block;
+        border: none;
+        background-color: $purple;
+        color: #FFFFFF;
+        margin-top: 36px;
+    }
+
+    &__close, &__success-close {
+        border: none;
+        outline: none;
+        appearance: none;
+        width: 12px;
+        height: 12px;
+        background-color: transparent;
+        background-image: url('../images/close-icon.svg');
+        background-repeat: no-repeat;
+        background-size: 12px 12px;
+        background-position: center;
+        cursor: pointer;
+        position: absolute;
+        top: 38px;
+        right: 38px;
+
+        @media (max-width: 1023px) {
+            top: 30px;
+            right: 30px;
+        }
+    }
+}

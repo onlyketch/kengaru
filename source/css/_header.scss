@@ -1,10 +1,11 @@
 .header {
-    position: absolute;
-    top: 40px;
+    position: fixed;
+    top: 0;
     left: 0;
     right: 0;
-    padding: 12px 24px;
+    padding: 40px 24px 12px 24px;
     z-index: 30 !important;
+    background-color: #fdfdfd;
 
     .container {
         display: flex;

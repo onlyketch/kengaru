@@ -101,11 +101,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
      for (let i = 0; i < orderFormInputs.length; i++) {
         orderFormInputs[i].addEventListener('click', function() {
+
             if (!orderFormInputs[i].classList.contains('active')) {
-                orderFormInputs[i].textContent = '';
+                const range = document.createRange();
+                range.selectNodeContents(orderFormInputs[i]);
+                range.collapse(true);
+                const sel = window.getSelection();
+                sel.removeAllRanges();
+                sel.addRange(range);
             }
-            orderFormInputs[i].focus();
-            orderFormInputs[i].classList.add('active');
+            
         });
      }
 
@@ -124,9 +129,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 for (let input of orderFormInputs) {
                     input.classList.remove('active');
                 }
-                orderInputName.textContent = 'введите имя';
-                orderInputPhone.textContent = '+7 000 000 00 00';
-                orderInputComment.textContent = 'введите комментарий';
+                orderInputName.innerHTML = '&nbsp;<span class="order-form__placeholder">введите имя</span>';
+                orderInputPhone.innerHTML = '&nbsp;<span class="order-form__placeholder">+7 000 000 00 00</span>';
+                orderInputComment.innerHTML = '&nbsp;<span class="order-form__placeholder">введите комментарий</span>';
                 orderFormBody.classList.remove('visible');
                 orderForm.classList.remove('show');    
                 document.body.classList.remove('overflow-hidden');
@@ -144,14 +149,26 @@ document.addEventListener('DOMContentLoaded', function() {
      });
 
      orderInputName.addEventListener('input', function() {
+        if (!orderInputName.classList.contains('active')) {
+            orderInputName.querySelector('.order-form__placeholder').remove();
+            orderInputName.classList.add('active');
+        }
         orderHiddenName.value = orderInputName.textContent;
      });
 
      orderInputPhone.addEventListener('input', function() {
+        if (!orderInputPhone.classList.contains('active')) {
+            orderInputPhone.querySelector('.order-form__placeholder').remove();
+            orderInputPhone.classList.add('active');
+        }
         orderHiddenPhone.value = orderInputPhone.textContent;
      });
 
      orderInputComment.addEventListener('input', function() {
+        if (!orderInputComment.classList.contains('active')) {
+            orderInputComment.querySelector('.order-form__placeholder').remove();
+            orderInputComment.classList.add('active');
+        }
         orderHiddenComment.value = orderInputComment.textContent;
      });
 
@@ -173,9 +190,9 @@ document.addEventListener('DOMContentLoaded', function() {
                             for (let input of orderFormInputs) {
                                 input.classList.remove('active');
                             }
-                            orderInputName.textContent = 'введите имя';
-                            orderInputPhone.textContent = '+7 000 000 00 00';
-                            orderInputComment.textContent = 'введите комментарий';
+                            orderInputName.innerHTML = '&nbsp;<span class="order-form__placeholder">введите имя</span>';
+                            orderInputPhone.innerHTML = '&nbsp;<span class="order-form__placeholder">+7 000 000 00 00</span>';
+                            orderInputComment.innerHTML = '&nbsp;<span class="order-form__placeholder">введите комментарий</span>';
                         }, 500);
 
                         orderFormSuccess.classList.add('show');

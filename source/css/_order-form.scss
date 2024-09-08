@@ -63,13 +63,12 @@
     }
 
     &__input {
-        color: $purple;
+        color: #DDD2E5;
         caret-color: $purple;
         
-    }
-
-    &__placeholder {
-        color: #DDD2E5;
+        &.active {
+            color: $purple;
+        }
     }
 
     &__submit {

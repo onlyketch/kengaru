@@ -98,17 +98,31 @@ document.addEventListener('DOMContentLoaded', function() {
      let orderFormClose = document.querySelector('.order-form__close');
      let orderFormSuccess = document.querySelector('.order-form__success');
      let orderFormSuccessClose = document.querySelector('.order-form__success-close');
+     let orderPlaceholderName = 'введите имя';
+     let orderPlaceholderPhone = '+7 000 000 00 00';
+     let orderPlaceholderComment = 'введите комментарий';
+
+     function cursorPosition(target, start) {
+        const range = document.createRange();
+        range.selectNodeContents(target);
+        range.collapse(start);
+        const sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+     }
 
      for (let i = 0; i < orderFormInputs.length; i++) {
         orderFormInputs[i].addEventListener('click', function() {
 
             if (!orderFormInputs[i].classList.contains('active')) {
-                const range = document.createRange();
-                range.selectNodeContents(orderFormInputs[i]);
-                range.collapse(true);
-                const sel = window.getSelection();
-                sel.removeAllRanges();
-                sel.addRange(range);
+                if (i !== 1) {
+                    cursorPosition(orderFormInputs[i], true);
+                } else {
+                    orderFormInputs[i].textContent = orderFormInputs[i].textContent.replace(orderPlaceholderPhone, '+7');
+                    cursorPosition(orderFormInputs[i], false);
+                    orderFormInputs[i].classList.add('active');
+                }
+                
             }
             
         });
@@ -129,9 +143,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 for (let input of orderFormInputs) {
                     input.classList.remove('active');
                 }
-                orderInputName.innerHTML = '&nbsp;<span class="order-form__placeholder">введите имя</span>';
-                orderInputPhone.innerHTML = '&nbsp;<span class="order-form__placeholder">+7 000 000 00 00</span>';
-                orderInputComment.innerHTML = '&nbsp;<span class="order-form__placeholder">введите комментарий</span>';
+                orderInputName.textContent = orderPlaceholderName;
+                orderInputPhone.textContent = orderPlaceholderPhone;
+                orderInputComment.textContent = orderPlaceholderComment;
+                orderHiddenName.value = '';
+                orderHiddenPhone.value = '';
+                orderHiddenComment.value = '';
                 orderFormBody.classList.remove('visible');
                 orderForm.classList.remove('show');    
                 document.body.classList.remove('overflow-hidden');
@@ -150,24 +167,50 @@ document.addEventListener('DOMContentLoaded', function() {
 
      orderInputName.addEventListener('input', function() {
         if (!orderInputName.classList.contains('active')) {
-            orderInputName.querySelector('.order-form__placeholder').remove();
+            orderInputName.textContent = orderInputName.textContent.replace(orderPlaceholderName, '');
+            cursorPosition(orderInputName, false);
             orderInputName.classList.add('active');
+        } else {
+            if (orderInputName.textContent == '') {
+                orderInputName.classList.remove('active');
+                orderInputName.textContent = orderPlaceholderName;
+            }
         }
         orderHiddenName.value = orderInputName.textContent;
      });
 
      orderInputPhone.addEventListener('input', function() {
-        if (!orderInputPhone.classList.contains('active')) {
-            orderInputPhone.querySelector('.order-form__placeholder').remove();
-            orderInputPhone.classList.add('active');
-        }
+        orderInputPhone.textContent = orderInputPhone.textContent.replace(/[A-Za-zА-Яа-яЁё]/, '');
+        cursorPosition(orderInputPhone, false);
         orderHiddenPhone.value = orderInputPhone.textContent;
+        if (orderInputPhone.textContent.length > 12) {
+            orderInputPhone.textContent = orderInputPhone.textContent.slice(0, -1);
+            cursorPosition(orderInputPhone, false);
+        }
+        if (orderInputPhone.textContent == '') {
+            orderInputPhone.textContent = '+7';
+            cursorPosition(orderInputPhone, false);
+        }
      });
+
+     orderInputPhone.addEventListener('focus', function() {
+        if (!orderInputPhone.classList.contains('active')) {
+                orderInputPhone.textContent = orderInputPhone.textContent.replace(orderPlaceholderPhone, '+7');
+                cursorPosition(orderInputPhone, false);
+                orderInputPhone.classList.add('active');
+        }
+     });    
 
      orderInputComment.addEventListener('input', function() {
         if (!orderInputComment.classList.contains('active')) {
-            orderInputComment.querySelector('.order-form__placeholder').remove();
+            orderInputComment.textContent = orderInputComment.textContent.replace(orderPlaceholderComment, '');
+            cursorPosition(orderInputComment, false);
             orderInputComment.classList.add('active');
+        } else {
+            if (orderInputComment.textContent == '') {
+                orderInputComment.classList.remove('active');
+                orderInputComment.textContent = orderPlaceholderComment;
+            }
         }
         orderHiddenComment.value = orderInputComment.textContent;
      });
@@ -190,9 +233,12 @@ document.addEventListener('DOMContentLoaded', function() {
                             for (let input of orderFormInputs) {
                                 input.classList.remove('active');
                             }
-                            orderInputName.innerHTML = '&nbsp;<span class="order-form__placeholder">введите имя</span>';
-                            orderInputPhone.innerHTML = '&nbsp;<span class="order-form__placeholder">+7 000 000 00 00</span>';
-                            orderInputComment.innerHTML = '&nbsp;<span class="order-form__placeholder">введите комментарий</span>';
+                            orderInputName.textContent = orderPlaceholderName;
+                            orderInputPhone.textContent = orderPlaceholderPhone;
+                            orderInputComment.textContent = orderPlaceholderComment;
+                            orderHiddenName.value = '';
+                            orderHiddenPhone.value = '';
+                            orderHiddenComment.value = '';
                         }, 500);
 
                         orderFormSuccess.classList.add('show');

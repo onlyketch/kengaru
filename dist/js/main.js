@@ -41,12 +41,21 @@ document.addEventListener('DOMContentLoaded', function() {
     //Reviews
 
     let reviewItems = document.querySelectorAll('.reviews__item');
+    let reviewItemsTexts = document.querySelectorAll('.reviews__item-text');
+
+    for (let text of reviewItemsTexts) {
+        $clamp(text, {clamp: 2});
+    }
 
     for (let i = 0; i < reviewItems.length; i++) {
         reviewItems[i].addEventListener('click', function(e) {
-            console.log(e.target);
             if (!e.target.classList.contains('reviews-img') && !e.target.classList.contains('reviews__item-image-search-icon')) {
                 reviewItems[i].classList.toggle('active');
+            }
+            if (!reviewItems[i].classList.contains('active')) {
+                $clamp(reviewItemsTexts[i], {clamp: 2});
+            } else {
+                $clamp(reviewItemsTexts[i], {clamp: '500px'});
             }
             
         });
@@ -249,6 +258,37 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
      });
+
+
+     // селект списка врачей
+
+     let selectVector = document.querySelector('.page-info__select');
+     let selectVectorValue = document.querySelector('.page-info__select-value');
+     let selectVectorDrop = document.querySelector('.page-info__select-drop');
+     let selectVectorDropItems = document.querySelectorAll('.page-info__select-drop-item');
+     let hiddenChoose = document.getElementById('vector-choose');
+
+     if (selectVector !== null) {
+        for (let item of selectVectorDropItems) {
+            item.addEventListener('click', function() {
+                let val = item.getAttribute('data-value');
+                hiddenChoose.value = val;
+                selectVectorValue.textContent = item.textContent;
+            });
+         }
+    
+         selectVector.addEventListener('click', function() {
+            selectVectorDrop.classList.toggle('active');
+         });
+    
+         selectVector.addEventListener('blur', function() {
+            if (selectVectorDrop.classList.contains('active')) {
+                selectVectorDrop.classList.remove('active');
+            }
+         });
+     }
+
+
 
 
 });

@@ -110,6 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
      let orderPlaceholderName = 'введите имя';
      let orderPlaceholderPhone = '+7 000 000 00 00';
      let orderPlaceholderComment = 'введите комментарий';
+     let orderFormErrorText = document.querySelector('.order-form__error');
 
      function cursorPosition(target, start) {
         const range = document.createRange();
@@ -158,6 +159,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 orderHiddenName.value = '';
                 orderHiddenPhone.value = '';
                 orderHiddenComment.value = '';
+                orderFormErrorText.classList.remove('visible');
                 orderFormBody.classList.remove('visible');
                 orderForm.classList.remove('show');    
                 document.body.classList.remove('overflow-hidden');
@@ -175,6 +177,7 @@ document.addEventListener('DOMContentLoaded', function() {
      });
 
      orderInputName.addEventListener('input', function() {
+        orderHiddenName.value = orderInputName.textContent;
         if (!orderInputName.classList.contains('active')) {
             orderInputName.textContent = orderInputName.textContent.replace(orderPlaceholderName, '');
             cursorPosition(orderInputName, false);
@@ -183,9 +186,9 @@ document.addEventListener('DOMContentLoaded', function() {
             if (orderInputName.textContent == '') {
                 orderInputName.classList.remove('active');
                 orderInputName.textContent = orderPlaceholderName;
+                orderHiddenName.value = '';
             }
         }
-        orderHiddenName.value = orderInputName.textContent;
      });
 
      orderInputPhone.addEventListener('input', function() {
@@ -196,7 +199,7 @@ document.addEventListener('DOMContentLoaded', function() {
             orderInputPhone.textContent = orderInputPhone.textContent.slice(0, -1);
             cursorPosition(orderInputPhone, false);
         }
-        if (orderInputPhone.textContent == '') {
+        if (orderInputPhone.textContent.length < 3) {
             orderInputPhone.textContent = '+7';
             cursorPosition(orderInputPhone, false);
         }
@@ -227,7 +230,7 @@ document.addEventListener('DOMContentLoaded', function() {
      orderForma.addEventListener('submit', function(event) {
             event.preventDefault();
 
-            if (orderHiddenName.value !== '' && orderHiddenPhone.value !== '') {
+            if (orderHiddenName.value !== '' && orderHiddenPhone.value.length == 12) {
 
                 let form_data = $(this).serialize();
                 $.ajax({
@@ -248,6 +251,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             orderHiddenName.value = '';
                             orderHiddenPhone.value = '';
                             orderHiddenComment.value = '';
+                            orderFormErrorText.classList.remove('visible');
                         }, 500);
 
                         orderFormSuccess.classList.add('show');
@@ -255,6 +259,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                
                 });
+            } else {
+                orderFormErrorText.classList.add('visible');
+                if (orderHiddenName.value == '' && orderHiddenPhone.value !== '') {
+                    orderFormErrorText.textContent = 'Введите имя';
+                } else if (orderHiddenPhone.value.length < 12 && orderHiddenName.value !== '') {
+                    orderFormErrorText.textContent = 'Введите телефон';
+                } else if (orderHiddenName.value == '' && orderHiddenPhone.value.length < 12) {
+                    orderFormErrorText.textContent = 'Введите имя и телефон для связи';
+                }
             }
 
      });

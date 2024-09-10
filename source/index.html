@@ -584,13 +584,16 @@
                 <input type="hidden" name="order-name" value="">
                 <input type="hidden" name="order-phone" value="">
                 <input type="hidden" name="order-comment" value="">
-                <input type="submit" class="btn-default order-form__submit" value="Записаться">
+                <div class="order-form__group">
+                    <input type="submit" class="btn-default order-form__submit" value="Записаться">
+                    <span class="order-form__error"></span>
+                </div>
             </form>
             <button class="order-form__close"></button>
         </div>
         <div class="order-form__success">
             <div class="order-form__form">
-                Спасибо! Скоро мы c вами свяжемся
+                Спасибо!<br>Скоро наш менеджер свяжется с вами.
             </div>
             <button class="order-form__success-close"></button>
         </div>

@@ -279,13 +279,19 @@ document.addEventListener('DOMContentLoaded', function() {
      let selectVectorValue = document.querySelector('.page-info__select-value');
      let selectVectorDrop = document.querySelector('.page-info__select-drop');
      let selectVectorDropItems = document.querySelectorAll('.page-info__select-drop-item');
-     let hiddenChoose = document.getElementById('vector-choose');
+     let hiddenVectorChoose = document.getElementById('vector-choose');
+     let hiddenReviewsChoose = document.getElementById('reviews-choose');
 
      if (selectVector !== null) {
         for (let item of selectVectorDropItems) {
             item.addEventListener('click', function() {
                 let val = item.getAttribute('data-value');
-                hiddenChoose.value = val;
+                if (hiddenVectorChoose !== null) {
+                    hiddenVectorChoose.value = val;
+                } else if (hiddenReviewsChoose !== null) {
+                    hiddenReviewsChoose.value = val;
+                }
+                
                 selectVectorValue.textContent = item.textContent;
             });
          }
@@ -300,6 +306,170 @@ document.addEventListener('DOMContentLoaded', function() {
             }
          });
      }
+
+     // переключение отзывов
+
+     let reviewSwitchers = document.querySelectorAll('.reviews-switcher');
+     let selectReviews = document.getElementById('select-reviews');
+     let reviewItemsClinic = document.getElementById('reviews-clinic');
+     let reviewItemsDoctor = document.getElementById('reviews-doc');
+
+     if (reviewSwitchers !== null) {
+        for (let i = 0; i < reviewSwitchers.length; i++) {
+            reviewSwitchers[i].addEventListener('click', function() {
+                for (let item of reviewSwitchers) {
+                    if (item.classList.contains('active')) item.classList.remove('active');
+                }
+                this.classList.add('active');
+                if (i == 1) {
+                    selectReviews.classList.add('hidden');
+                    reviewItemsDoctor.classList.add('hidden');
+                    reviewItemsClinic.classList.remove('hidden');
+                } else {
+                    selectReviews.classList.remove('hidden');
+                    reviewItemsDoctor.classList.remove('hidden');
+                    reviewItemsClinic.classList.add('hidden');
+                }
+            });
+        }
+     }
+
+     // форма оставления отзыва
+
+     let reviewForm = document.querySelector('.reviews-form');
+     let reviewForma = document.querySelector('.reviews-form__form');
+     let reviewFormInputName = this.getElementById('username');
+     let reviewFormTextareaReview = this.getElementById('review');
+     let reviewFormBody = document.querySelector('.reviews-form__body');
+     let reviewFormClose = document.querySelector('.reviews-form__close');
+     let reviewFormSuccess = document.querySelector('.reviews-form__success');
+     let reviewFormSuccessClose = document.querySelector('.reviews-form__success-close');
+     let reviewButtons = document.querySelectorAll('.review-button');
+
+     if (reviewForm !== null) {
+
+        for (let i = 0; i < reviewButtons.length; i++) {
+            reviewButtons[i].addEventListener('click', function() {
+            reviewForm.classList.add('show');
+            reviewFormBody.classList.add('show');
+            reviewFormBody.classList.add('visible');
+            document.body.classList.add('overflow-hidden');
+            });
+         }
+     
+
+     reviewFormClose.addEventListener('click', function() {
+        reviewFormBody.classList.remove('show');
+        setTimeout(function() {
+            reviewFormBody.classList.remove('visible');
+            reviewForm.classList.remove('show');    
+            document.body.classList.remove('overflow-hidden');
+            reviewForma.reset();
+        }, 500);
+        
+    });
+
+    reviewForma.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        if (reviewFormInputName.value !== '' && reviewFormTextareaReview.value !== '') {
+
+            let form_data = $(this).serialize();
+            $.ajax({
+                type: "GET", 
+                url: "/",
+                data: form_data,
+                success: function() {
+
+                    reviewFormBody.classList.remove('show');
+                    setTimeout(function() {
+                        reviewFormBody.classList.remove('visible');
+                        reviewForma.reset(); 
+                    }, 500);
+
+                    reviewFormSuccess.classList.add('show');
+                    reviewFormSuccess.classList.add('visible');
+                }
+           
+            });
+        }
+
+    });
+
+    reviewFormSuccessClose.addEventListener('click', function() {
+        reviewFormSuccess.classList.remove('show');
+        setTimeout(function() {
+            reviewFormSuccess.classList.remove('visible');
+            reviewForm.classList.remove('show');    
+            document.body.classList.remove('overflow-hidden');
+        }, 500);
+    });
+
+    }
+     // форма оставления отзыва Селект
+
+     let reviewFormSelect = document.querySelector('.reviews-form__form-select');
+     let reviewFormSelectValue = document.querySelector('.reviews-form__form-select-value'); 
+     let reviewFormSelectDrop = document.querySelector('.reviews-form__form-select-drop');
+     let reviewFormSelectDropItems = document.querySelectorAll('.reviews-form__form-select-drop-item');
+     let hiddenChooseDoctor = document.getElementById('choose-doctor');
+
+
+     if (reviewFormSelect !== null) {
+
+        hiddenChooseDoctor.value = reviewFormSelectValue.textContent;
+
+        for (let item of reviewFormSelectDropItems) {
+            item.addEventListener('click', function() {
+                let val = item.getAttribute('data-value');
+                hiddenChooseDoctor.value = val;
+                reviewFormSelectValue.textContent = item.textContent;
+            });
+         }
+
+        reviewFormSelect.addEventListener('click', function() {
+            reviewFormSelectDrop.classList.toggle('active');
+         });
+    
+         reviewFormSelect.addEventListener('blur', function() {
+            if (reviewFormSelectDrop.classList.contains('active')) {
+                reviewFormSelectDrop.classList.remove('active');
+            }
+         });
+
+
+     }
+
+     // форма оставления отзыва Переключатель
+
+     let reviewFormSwitchers = document.querySelectorAll('.reviews-form__switcher');
+     let hiddenReviewFormType = document.getElementById('reviews-form-type');
+     let reviewFormGroupForSelect = document.querySelector('.reviews-form__form-group-select');
+
+     if (reviewFormSwitchers !== null) {
+
+        for (let i = 0; i < reviewFormSwitchers.length; i++) {
+            reviewFormSwitchers[i].addEventListener('click', function() {
+                if (!this.classList.contains('active')) {
+                    for (let item of reviewFormSwitchers) {
+                        if (item.classList.contains('active')) item.classList.remove('active');
+                    }
+                    this.classList.add('active');
+                    if (i == 0) {
+                        hiddenReviewFormType.value = 'about-doc';
+                        reviewFormGroupForSelect.classList.remove('hidden');
+                    } else {
+                        reviewFormGroupForSelect.classList.add('hidden');
+                        hiddenReviewFormType.value = 'about-clinic';
+                    }
+                }
+            });
+        }
+
+     }
+
+
+     
 
 
 

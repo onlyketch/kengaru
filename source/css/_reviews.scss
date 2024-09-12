@@ -9,7 +9,8 @@
         border-radius: 40px;
         box-sizing: border-box;
         min-height: 560px;
-        z-index: 20;
+        z-index: 10;
+        overflow: hidden;
 
         h2 {
             max-width: 120px;
@@ -24,6 +25,15 @@
         @media (max-width: 1023px) {
             padding: 32px 28px;
             border-radius: 32px;
+            min-height: 594px;
+        }
+    }
+
+    &__wrapper-high {
+        min-height: 860px;
+
+        @media (max-width: 1023px) {
+            min-height: 594px;
         }
     }
 
@@ -31,8 +41,8 @@
         position: absolute;
         top: 0;
         bottom: 0;
-        padding-top: 60px;
-        padding-bottom: 60px;
+        padding-top: 30px;
+        padding-bottom: 30px;
         left: 50%;
         max-width: 546px;
         transform: translateX(-50%);
@@ -54,10 +64,24 @@
             left: 12px;
             right: 12px;
             transform: translateX(0);
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+
+        &_another {
+            @media (max-width: 1023px) {
+                padding-top: 20px;
+                padding-bottom: 20px; 
+            } 
+        }
+
+        &.hidden {
+            display: none;
         }
     }
 
     &__scrim {
+        visibility: hidden;
         position: fixed;
         top: 0;
         left: 50%;
@@ -70,6 +94,7 @@
         pointer-events: none;
 
         @media (max-width: 1023px) {
+            visibility: visible;
             height: 111px;
             left: 0;
             right: 0;

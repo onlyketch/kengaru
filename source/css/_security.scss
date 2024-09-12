@@ -4,84 +4,11 @@
 
     &__wrapper {
         display: flex;
+        margin: 0 -6px;
 
         @media (max-width: 1023px) {
             flex-direction: column;
-        }
-    }
-
-    &__card {
-        position: relative;
-        padding: 42px 48px 44px 48px;
-        box-sizing: border-box;
-        background-color: #FDFDFD;
-        backdrop-filter: blur(32px);
-        border-radius: 40px;
-        width: 50%;
-        max-width: 546px;
-        margin-right: 6px;
-
-        @media (max-width: 1023px) {
-            width: 100%;
-            max-width: 100%;
-            margin-right: 0;
-            padding: 32px 28px 36px 28px;
-            border-radius: 32px; 
-        }
-    }
-
-    &__title {
-        font-family: "Inter Medium", Arial, Helvetica, sans-serif;
-        font-size: 64px;
-        line-height: 70px;
-        letter-spacing: -0.02em;
-        background: linear-gradient(180deg, #8348B2 0%, rgba(191, 125, 244, 0.4) 125.83%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-fill-color: transparent;
-        margin-top: 140px;
-
-        @media (max-width: 1120px) {
-            font-size: 50px;
-            line-height: 56px;
-        }
-
-        @media (max-width: 1023px) {
-            font-size: 40px;
-            line-height: 46px;
-            margin-top: 114px;
-        }
-
-        @media (max-width: 358px) {
-            font-size: 32px;
-            line-height: 38px; 
-        }
-    }
-
-    &__subtitle {
-        font-family: "Inter Medium", Arial, Helvetica, sans-serif;
-        font-size: 16px;
-        line-height: 20px;
-        color: $purple;
-        margin-top: 20px;
-        max-width: 340px;
-
-        @media (max-width: 1023px) {
-            font-size: 14px;
-            line-height: 18px;
-            margin-top: 16px;
-        }
-    }
-
-    &__btn-order {
-        position: absolute;
-        top: 36px;
-        right: 48px;
-
-        @media (max-width: 1023px) {
-            top: 28px;
-            right: 28px;
+            margin: 0;
         }
     }
 
@@ -89,7 +16,7 @@
         position: relative;
         height: 380px;
         border-radius: 40px;
-        margin-left: 6px;
+        margin: 0 6px;
         overflow: hidden;
         width: 50%;
         max-width: 546px;
@@ -159,7 +86,7 @@
         @media (max-width: 1023px) {
             width: 100%;
             max-width: 100%;
-            margin-left: 0;
+            margin: 0;
             margin-top: 12px;
             border-radius: 32px;
             height: 300px; 

@@ -7,11 +7,11 @@
     <meta name="format-detection" content="date=no">
     <meta name="format-detection" content="address=no">
     <meta name="format-detection" content="email=no">
-    <title>KengaRu | Страница врача</title>
+    <title>KengaRu | Мнения пациентов</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    
+
     <header class="header">
         <div class="container">
             <div class="header__left">
@@ -39,304 +39,22 @@
         </div>
     </header>
 
-    <section class="doctor">
+    <div class="page-info">
         <div class="container">
-            <div class="doctor__image-mob">
-                <img src="images/askar.png" alt="Фото">
-            </div>
-            <div class="doctor__wrapper">
-                <div class="doctor__info">
-                    <a href="#" class="doctor__back-link">Назад к списку врачей</a>
-                    <div class="doctor__name">Аскар Махмутходжаев</div>
-                    <div class="doctor__position">Анестезиолог, заведующий отделением</div>
-                    <div class="doctor__exp">
-                        <div class="doctor__exp-years">12</div>
-                        <div class="doctor__exp-sign">Лет стажа</div>
+            <div class="page-info__wrapper">
+                <div class="page-info__name">Мнения пациентов</div>
+                <h1 class="page-info__title">О <span class="reviews-switcher">Врачах</span> <span class="reviews-switcher active">Клинике</span></h1>
+                <div class="page-info__subtitle">Ваш случай&nbsp;&mdash; особенный. Мы&nbsp;обеспечиваем индивидуальный подход и&nbsp;поиск оптимальных решений для каждого конкретного пациента.</div>
+                <div id="select-reviews" class="page-info__select hidden" tabindex="0">
+                    <span class="page-info__select-value">Все врачи</span>    
+                    <div class="page-info__select-arrow"></div>
+                    <div class="page-info__select-drop">
+                        <div class="page-info__select-drop-item" data-value="all">Все врачи</div>
+                        <div class="page-info__select-drop-item" data-value="therapy">Терапевты</div>
+                        <div class="page-info__select-drop-item" data-value="surgery">Хирурги</div>
+                        <div class="page-info__select-drop-item" data-value="anesthes">Анестезиологи</div>
                     </div>
-                    <div class="doctor__tags">
-                        <div class="doctor__tag">
-                            <div class="doctor__tag-bull"></div>
-                            <div class="doctor__tag-text">Детское отделение</div>
-                        </div>
-                        <div class="doctor__tag">
-                            <div class="doctor__tag-bull"></div>
-                            <div class="doctor__tag-text">Подростковое</div>
-                        </div>
-                        <div class="doctor__tag">
-                            <div class="doctor__tag-bull"></div>
-                            <div class="doctor__tag-text">Взрослое</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="doctor__image">
-                    <img src="images/askar.png" alt="Фото">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="description">
-        <div class="container">
-            <h1 class="description__title">Анестезиолог помогает пациенту пройти лечение с максимальным комфортом - без боли и страха</h1>
-            <div class="description__text">Лечение в седации позволяет перенести любую стоматологическую процедуру без чувства страха, рвотного рефлекса и других неприятных ощущений. При аллергии, боязни уколов и для особенных пациентов предусмотрен общий наркоз.</div>
-        </div>
-    </section>
-
-    <section class="security">
-        <div class="container">
-            <div class="security__wrapper">
-                <div class="focus-card">
-                    <h2 class="focus-card__position">Анестезиолог</h2>
-                    <div class="focus-card__title">Безопасность</div>
-                    <div class="focus-card__subtitle">Врач, который постоянно следит<br>за вашим состоянием во время операции</div>
-                    <button class="focus-card__btn-order btn-default order-button">Записаться на прием</button>
-                </div>
-                <div class="security__slider">
-                    <img src="images/doctors.jpg" alt="">
-                    <img src="images/doctors.jpg" alt="">
-                    <img src="images/doctors.jpg" alt="">
-                    <img src="images/doctors.jpg" alt="">
-                    <img src="images/doctors.jpg" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="experience">
-        <div class="container">
-            <div class="experience__wrapper">
-                <h2 class="experience__title">Образование и опыт</h2>
-                <div class="experience__slider">
-                      <div class="experience__slider-item">
-                        <div class="line-small"></div>
-                        <div class="line-medium"></div>
-                        <div class="line-big"></div>
-                        <div class="line-medium"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-medium"></div>
-                        <div class="line-holder">
-                          <div class="line-holder__bull"></div>
-                          <a href="images/sert.jpg" data-fancybox data-caption="Государственная Медицинская Академия. Факультет лечебное дело" class="line-holder__table">
-                            <div class="line-holder__table-search-icon"></div>
-                            <img src="images/sert.jpg" alt="no load">
-                          </a>
-                          <div class="line-holder__sign">Государственная Медицинская Академия. Факультет лечебное дело</div>
-                          <div class="line-holder__year">1998 г.</div>
-                        </div>
-                        <div class="line-medium"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-medium"></div>
-                        <div class="line-big"></div>
-                        <div class="line-medium"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                      </div>
-                      <div class="experience__slider-item">
-                        <div class="line-small"></div>
-                        <div class="line-medium"></div>
-                        <div class="line-big"></div>
-                        <div class="line-medium"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-medium"></div>
-                        <div class="line-holder">
-                          <div class="line-holder__bull">
-                            <div class="line-holder__sign no-table">Государственная Медицинская Академия. Факультет лечебное дело</div>
-                          </div>
-                          <div class="line-holder__year">2001 г.</div>
-                        </div>
-                        <div class="line-medium"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-medium"></div>
-                        <div class="line-big"></div>
-                        <div class="line-medium"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                      </div>
-                      <div class="experience__slider-item">
-                        <div class="line-small"></div>
-                        <div class="line-medium"></div>
-                        <div class="line-big"></div>
-                        <div class="line-medium"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-medium"></div>
-                        <div class="line-holder">
-                          <div class="line-holder__bull"></div>
-                          <a href="images/sert.jpg" data-fancybox data-caption="Государственная Медицинская Академия. Факультет лечебное дело" class="line-holder__table">
-                            <div class="line-holder__table-search-icon"></div>
-                            <img src="images/sert.jpg" alt="no load">
-                          </a>
-                          <div class="line-holder__sign">Государственная Медицинская Академия. Факультет лечебное дело</div>
-                          <div class="line-holder__year">2003 г.</div>
-                        </div>
-                        <div class="line-medium"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-medium"></div>
-                        <div class="line-big"></div>
-                        <div class="line-medium"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                      </div>
-                      <div class="experience__slider-item">
-                        <div class="line-small"></div>
-                        <div class="line-medium"></div>
-                        <div class="line-big"></div>
-                        <div class="line-medium"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-medium"></div>
-                        <div class="line-holder">
-                          <div class="line-holder__bull"></div>
-                          <a href="images/sert.jpg" data-fancybox data-caption="Государственная Медицинская Академия. Факультет лечебное дело" class="line-holder__table">
-                            <div class="line-holder__table-search-icon"></div>
-                            <img src="images/sert.jpg" alt="no load">
-                          </a>
-                          <div class="line-holder__sign">Государственная Медицинская Академия. Факультет лечебное дело</div>
-                          <div class="line-holder__year">2004 г.</div>
-                        </div>
-                        <div class="line-medium"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-medium"></div>
-                        <div class="line-big"></div>
-                        <div class="line-medium"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                        <div class="line-small"></div>
-                      </div>
-                </div>
-            </div>   
-            
-        </div>
-    </section>
-
-    <div class="blocks">
-        <div class="container">
-            <div class="blocks__wrapper">
-                <div class="blocks__vector">
-                    <h2>Направления деятельности</h2>
-                    <div class="blocks__vector-sliders">
-                        <div class="blocks__vector-wrapper">
-                            <div class="blocks__vector-slider-left one">
-                                <div class="blocks__vector-slider-item">
-                                    <div class="blocks__vector-slider-item-bull"></div>
-                                    <div class="blocks__vector-slider-item-text">Лечение во сне</div>
-                                </div>
-                                <div class="blocks__vector-slider-item">
-                                    <div class="blocks__vector-slider-item-bull"></div>
-                                    <div class="blocks__vector-slider-item-text">Общий наркоз</div>
-                                </div>
-                                <div class="blocks__vector-slider-item">
-                                    <div class="blocks__vector-slider-item-bull"></div>
-                                    <div class="blocks__vector-slider-item-text">Закись азотная седации</div>
-                                </div>
-                            </div>
-                            <div class="blocks__vector-slider-left second">
-                                <div class="blocks__vector-slider-item">
-                                    <div class="blocks__vector-slider-item-bull"></div>
-                                    <div class="blocks__vector-slider-item-text">Лечение во сне</div>
-                                </div>
-                                <div class="blocks__vector-slider-item">
-                                    <div class="blocks__vector-slider-item-bull"></div>
-                                    <div class="blocks__vector-slider-item-text">Общий наркоз</div>
-                                </div>
-                                <div class="blocks__vector-slider-item">
-                                    <div class="blocks__vector-slider-item-bull"></div>
-                                    <div class="blocks__vector-slider-item-text">Закись азотная седации</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="blocks__vector-wrapper">
-                            <div class="blocks__vector-slider-right one">
-                                <div class="blocks__vector-slider-item">
-                                    <div class="blocks__vector-slider-item-bull"></div>
-                                    <div class="blocks__vector-slider-item-text">Лечение пациентов с заболеванием сердца</div>
-                                </div>
-                                <div class="blocks__vector-slider-item">
-                                    <div class="blocks__vector-slider-item-bull"></div>
-                                    <div class="blocks__vector-slider-item-text">Медицинский туризм</div>
-                                </div>
-                            </div>
-                            <div class="blocks__vector-slider-right second">
-                                <div class="blocks__vector-slider-item">
-                                    <div class="blocks__vector-slider-item-bull"></div>
-                                    <div class="blocks__vector-slider-item-text">Лечение пациентов с заболеванием сердца</div>
-                                </div>
-                                <div class="blocks__vector-slider-item">
-                                    <div class="blocks__vector-slider-item-bull"></div>
-                                    <div class="blocks__vector-slider-item-text">Медицинский туризм</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="blocks__fact">
-                    <h2>Факт</h2>
-                    <div class="blocks__fact-icon">
-                        <img src="images/stars.svg" alt="icon">
-                    </div>
-                    <div class="blocks__fact-text">Регулярно повышает квалификацию, обучаясь в России и за рубежом</div>
-                    <button class="blocks__fact-btn btn-default">Оставить отзыв</button>
+                    <input type="hidden" id="reviews-choose" value="all">
                 </div>
             </div>
         </div>
@@ -344,10 +62,164 @@
 
     <div class="reviews">
         <div class="container">
-            <div class="reviews__wrapper">
-                <h2>Мнения пациентов</h2>
-                <div class="reviews__scrim"></div>
-                <div class="reviews__items">
+            <div class="reviews__wrapper reviews__wrapper-high">
+                <div class="reviews__items reviews__items_another" id="reviews-clinic">
+                    <div class="reviews__item">
+                        <div class="reviews__item-wrap">
+                            <div class="reviews__item-square">E</div>
+                            <div class="reviews__item-info">
+                                <div class="reviews__item-name">Елизавета Попова</div>
+                                <div class="reviews__item-about">О клинике</div>
+                                <div class="reviews__item-text">
+                                    Была сегодня на профессиональной гигиене полости рта у Анастасии Витальевны! Мне всё понравилось, было выполнено аккуратно, безболезненно, комфортно, спасибо большое! Была сегодня на профессиональной гигиене полости рта у Анастасии Витальевны! Мне всё понравилось, было выполнено аккуратно, безболезненно, комфортно, спасибо большое!
+                                </div>
+                                <div class="reviews__item-date">12 января 2023</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews__item">
+                        <div class="reviews__item-wrap">
+                            <div class="reviews__item-square">K</div>
+                            <div class="reviews__item-info">
+                                <div class="reviews__item-name">Константин Константинопольский</div>
+                                <div class="reviews__item-about">О клинике</div>
+                                <div class="reviews__item-text">
+                                    Была сегодня на профессиональной гигиене полости рта у Анастасии Витальевны! Мне всё понравилось, было выполнено аккуратно, безболезненно, комфортно, спасибо большое! Была сегодня на профессиональной гигиене полости рта у Анастасии Витальевны! Мне всё понравилось, было выполнено аккуратно, безболезненно, комфортно, спасибо большое!
+                                </div>
+                                <div class="reviews__item-images">
+                                    <a href="images/clinic.jpg" data-fancybox="review2" class="reviews__item-image">
+                                        <img src="images/clinic.jpg" alt="фото" class="reviews-img">
+                                        <div class="reviews__item-image-search-icon"></div>
+                                    </a>
+                                    <a href="images/clinic.jpg" data-fancybox="review2" class="reviews__item-image">
+                                        <img src="images/clinic.jpg" alt="фото" class="reviews-img">
+                                        <div class="reviews__item-image-search-icon"></div>
+                                    </a>
+                                </div>
+                                <div class="reviews__item-date">12 января 2023</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews__item">
+                        <div class="reviews__item-wrap">
+                            <div class="reviews__item-square">M</div>
+                            <div class="reviews__item-info">
+                                <div class="reviews__item-name">Марина Федорова</div>
+                                <div class="reviews__item-about">О клинике</div>
+                                <div class="reviews__item-text">
+                                    Была сегодня на профессиональной гигиене полости рта у Анастасии Витальевны! Мне всё понравилось, было выполнено аккуратно, безболезненно, комфортно, спасибо большое! Была сегодня на профессиональной гигиене полости рта у Анастасии Витальевны! Мне всё понравилось, было выполнено аккуратно, безболезненно, комфортно, спасибо большое!
+                                </div>
+                                <div class="reviews__item-images">
+                                    <a href="images/clinic.jpg" data-fancybox="review3" class="reviews__item-image">
+                                        <img src="images/clinic.jpg" alt="фото" class="reviews-img">
+                                        <div class="reviews__item-image-search-icon"></div>
+                                    </a>
+                                    <a href="images/clinic.jpg" data-fancybox="review3" class="reviews__item-image">
+                                        <img src="images/clinic.jpg" alt="фото" class="reviews-img">
+                                        <div class="reviews__item-image-search-icon"></div>
+                                    </a>
+                                </div>
+                                <div class="reviews__item-date">12 января 2023</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews__item">
+                        <div class="reviews__item-wrap">
+                            <div class="reviews__item-square">E</div>
+                            <div class="reviews__item-info">
+                                <div class="reviews__item-name">Елизавета Попова</div>
+                                <div class="reviews__item-about">О клинике</div>
+                                <div class="reviews__item-text">
+                                    Была сегодня на профессиональной гигиене полости рта у Анастасии Витальевны! Мне всё понравилось, было выполнено аккуратно, безболезненно, комфортно, спасибо большое! Была сегодня на профессиональной гигиене полости рта у Анастасии Витальевны! Мне всё понравилось, было выполнено аккуратно, безболезненно, комфортно, спасибо большое!
+                                </div>
+                                <div class="reviews__item-date">12 января 2023</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews__item">
+                        <div class="reviews__item-wrap">
+                            <div class="reviews__item-square">K</div>
+                            <div class="reviews__item-info">
+                                <div class="reviews__item-name">Константин Константинопольский</div>
+                                <div class="reviews__item-about">О клинике</div>
+                                <div class="reviews__item-text">
+                                    Была сегодня на профессиональной гигиене полости рта у Анастасии Витальевны! Мне всё понравилось, было выполнено аккуратно, безболезненно, комфортно, спасибо большое! Была сегодня на профессиональной гигиене полости рта у Анастасии Витальевны! Мне всё понравилось, было выполнено аккуратно, безболезненно, комфортно, спасибо большое!
+                                </div>
+                                <div class="reviews__item-images">
+                                    <a href="images/clinic.jpg" data-fancybox="review5" class="reviews__item-image">
+                                        <img src="images/clinic.jpg" alt="фото" class="reviews-img">
+                                        <div class="reviews__item-image-search-icon"></div>
+                                    </a>
+                                    <a href="images/clinic.jpg" data-fancybox="review5" class="reviews__item-image">
+                                        <img src="images/clinic.jpg" alt="фото" class="reviews-img">
+                                        <div class="reviews__item-image-search-icon"></div>
+                                    </a>
+                                </div>
+                                <div class="reviews__item-date">12 января 2023</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews__item">
+                        <div class="reviews__item-wrap">
+                            <div class="reviews__item-square">M</div>
+                            <div class="reviews__item-info">
+                                <div class="reviews__item-name">Марина Федорова</div>
+                                <div class="reviews__item-about">О клинике</div>
+                                <div class="reviews__item-text">
+                                    Была сегодня на профессиональной гигиене полости рта у Анастасии Витальевны! Мне всё понравилось, было выполнено аккуратно, безболезненно, комфортно, спасибо большое! Была сегодня на профессиональной гигиене полости рта у Анастасии Витальевны! Мне всё понравилось, было выполнено аккуратно, безболезненно, комфортно, спасибо большое!
+                                </div>
+                                <div class="reviews__item-images">
+                                    <a href="images/clinic.jpg" data-fancybox="review6" class="reviews__item-image">
+                                        <img src="images/clinic.jpg" alt="фото" class="reviews-img">
+                                        <div class="reviews__item-image-search-icon"></div>
+                                    </a>
+                                    <a href="images/clinic.jpg" data-fancybox="review6" class="reviews__item-image">
+                                        <img src="images/clinic.jpg" alt="фото" class="reviews-img">
+                                        <div class="reviews__item-image-search-icon"></div>
+                                    </a>
+                                </div>
+                                <div class="reviews__item-date">12 января 2023</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews__item">
+                        <div class="reviews__item-wrap">
+                            <div class="reviews__item-square">M</div>
+                            <div class="reviews__item-info">
+                                <div class="reviews__item-name">Марина Федорова</div>
+                                <div class="reviews__item-about">О клинике</div>
+                                <div class="reviews__item-text">
+                                    Была сегодня на профессиональной гигиене полости рта у Анастасии Витальевны! Мне всё понравилось, было выполнено аккуратно, безболезненно, комфортно, спасибо большое! Была сегодня на профессиональной гигиене полости рта у Анастасии Витальевны! Мне всё понравилось, было выполнено аккуратно, безболезненно, комфортно, спасибо большое!
+                                </div>
+                                <div class="reviews__item-images">
+                                    <a href="images/clinic.jpg" data-fancybox="review7" class="reviews__item-image">
+                                        <img src="images/clinic.jpg" alt="фото" class="reviews-img">
+                                        <div class="reviews__item-image-search-icon"></div>
+                                    </a>
+                                    <a href="images/clinic.jpg" data-fancybox="review7" class="reviews__item-image">
+                                        <img src="images/clinic.jpg" alt="фото" class="reviews-img">
+                                        <div class="reviews__item-image-search-icon"></div>
+                                    </a>
+                                </div>
+                                <div class="reviews__item-date">12 января 2023</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews__item">
+                        <div class="reviews__item-wrap">
+                            <div class="reviews__item-square">E</div>
+                            <div class="reviews__item-info">
+                                <div class="reviews__item-name">Елизавета Попова</div>
+                                <div class="reviews__item-about">О клинике</div>
+                                <div class="reviews__item-text">
+                                    Была сегодня на профессиональной гигиене полости рта у Анастасии Витальевны! Мне всё понравилось, было выполнено аккуратно, безболезненно, комфортно, спасибо большое! Была сегодня на профессиональной гигиене полости рта у Анастасии Витальевны! Мне всё понравилось, было выполнено аккуратно, безболезненно, комфортно, спасибо большое!
+                                </div>
+                                <div class="reviews__item-date">12 января 2023</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews__items reviews__items_another hidden" id="reviews-doc">
                     <div class="reviews__item">
                         <div class="reviews__item-wrap">
                             <div class="reviews__item-square">E</div>
@@ -504,7 +376,26 @@
                     </div>
                 </div>
             </div>
-            <button class="btn-large order-button">Записаться к врачу</button>
+        </div>
+    </div>
+
+    <div class="focus-cards">
+        <div class="container">
+            <div class="card-wrapper">
+                <div class="focus-card">
+                    <h2 class="focus-card__position">Наш принцип</h2>
+                    <div class="focus-card__title">Забота</div>
+                    <div class="focus-card__subtitle">Мы&nbsp;считаем, что лечение должно проходить без стресса и&nbsp;создаем условия для того, чтобы всем было комфортно</div>
+                    <button class="focus-card__btn-order btn-default review-button">Оставить отзыв</button>
+                </div>
+                <div class="focus-card">
+                    <h2 class="focus-card__position">Акция</h2>
+                    <div class="focus-card__title">1000 баллов</div>
+                    <div class="focus-card__subtitle">Оставьте отзыв и&nbsp;мы&nbsp;начислим 1000 баллов по&nbsp;программе лояльности</div>
+                    <button class="focus-card__btn-order btn-default review-button">Оставить отзыв</button>
+                </div>
+            </div>
+            <button class="btn-large review-button">Оставить отзыв</button>
         </div>
     </div>
 
@@ -599,6 +490,46 @@
         </div>
     </div>
 
+    <div class="reviews-form">
+        <div class="reviews-form__overlay"></div>
+        <div class="reviews-form__body">
+            <div class="reviews-form__title">Здесь вы можете оставить отзыв <span class="reviews-form__switcher active">о враче</span> или <span class="reviews-form__switcher">о клинике</span></div>
+            <form class="reviews-form__form">
+                <div class="reviews-form__form-group">
+                    <label for="username">Ваше имя</label>
+                    <input type="text" name="username" id="username">
+                </div>
+                <div class="reviews-form__form-group reviews-form__form-group-select">
+                    <label>Выберите врача</label>
+                    <div class="reviews-form__form-select" tabindex="0">
+                        <span class="reviews-form__form-select-value">Аскар Махмутходжаев</span>
+                        <div class="reviews-form__form-select-arrow"></div>
+                        <div class="reviews-form__form-select-drop">
+                            <div class="reviews-form__form-select-drop-item" data-value="Аскар Махмутходжаев">Аскар Махмутходжаев</div>
+                            <div class="reviews-form__form-select-drop-item" data-value="Ирина Семёнова">Ирина Семёнова</div>
+                            <div class="reviews-form__form-select-drop-item" data-value="Артур Земелин">Артур Земелин</div>
+                            <div class="reviews-form__form-select-drop-item" data-value="Борис Ефремов">Борис Ефремов</div>
+                        </div>
+                    </div>
+                    <input type="hidden" name="choose-doctor" id="choose-doctor" value="">
+                </div>
+                <div class="reviews-form__form-group">
+                    <label for="review">Отзыв</label>
+                    <textarea name="review" id="review"></textarea>
+                </div>
+                <input type="submit" class="btn-default reviews-form__form-submit" value="Оставить отзыв">
+                <input type="hidden" name="reviews-form-type" id="reviews-form-type" value="about-doc">
+            </form>
+            <button class="reviews-form__close"></button>
+        </div>
+        <div class="reviews-form__success">
+            Спасибо! Скоро мы опубликуем ваш отзыв
+            <button class="reviews-form__success-close"></button>
+        </div>
+    </div>
+
+
+    
 
 
 

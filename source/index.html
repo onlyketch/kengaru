@@ -330,13 +330,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="blocks__fact">
+                <div class="fact-block">
                     <h2>Факт</h2>
-                    <div class="blocks__fact-icon">
+                    <div class="fact-block__icon">
                         <img src="images/stars.svg" alt="icon">
                     </div>
-                    <div class="blocks__fact-text">Регулярно повышает квалификацию, обучаясь в России и за рубежом</div>
-                    <button class="blocks__fact-btn btn-default">Оставить отзыв</button>
+                    <div class="fact-block__text">Регулярно повышает квалификацию, обучаясь в России и за рубежом</div>
+                    <button class="fact-block__btn btn-default review-button">Оставить отзыв</button>
                 </div>
             </div>
         </div>
@@ -596,6 +596,44 @@
                 Спасибо!<br>Скоро наш менеджер свяжется с вами.
             </div>
             <button class="order-form__success-close"></button>
+        </div>
+    </div>
+
+    <div class="reviews-form">
+        <div class="reviews-form__overlay"></div>
+        <div class="reviews-form__body">
+            <div class="reviews-form__title">Здесь вы можете оставить отзыв <span class="reviews-form__switcher active">о враче</span> или <span class="reviews-form__switcher">о клинике</span></div>
+            <form class="reviews-form__form">
+                <div class="reviews-form__form-group">
+                    <label for="username">Ваше имя</label>
+                    <input type="text" name="username" id="username">
+                </div>
+                <div class="reviews-form__form-group reviews-form__form-group-select">
+                    <label>Выберите врача</label>
+                    <div class="reviews-form__form-select" tabindex="0">
+                        <span class="reviews-form__form-select-value">Аскар Махмутходжаев</span>
+                        <div class="reviews-form__form-select-arrow"></div>
+                        <div class="reviews-form__form-select-drop">
+                            <div class="reviews-form__form-select-drop-item" data-value="Аскар Махмутходжаев">Аскар Махмутходжаев</div>
+                            <div class="reviews-form__form-select-drop-item" data-value="Ирина Семёнова">Ирина Семёнова</div>
+                            <div class="reviews-form__form-select-drop-item" data-value="Артур Земелин">Артур Земелин</div>
+                            <div class="reviews-form__form-select-drop-item" data-value="Борис Ефремов">Борис Ефремов</div>
+                        </div>
+                    </div>
+                    <input type="hidden" name="choose-doctor" id="choose-doctor" value="">
+                </div>
+                <div class="reviews-form__form-group">
+                    <label for="review">Отзыв</label>
+                    <textarea name="review" id="review"></textarea>
+                </div>
+                <input type="submit" class="btn-default reviews-form__form-submit" value="Оставить отзыв">
+                <input type="hidden" name="reviews-form-type" id="reviews-form-type" value="about-doc">
+            </form>
+            <button class="reviews-form__close"></button>
+        </div>
+        <div class="reviews-form__success">
+            Спасибо! Скоро мы опубликуем ваш отзыв
+            <button class="reviews-form__success-close"></button>
         </div>
     </div>
 

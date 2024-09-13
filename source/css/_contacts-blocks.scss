@@ -1,0 +1,12 @@
+.contacts-blocks {
+    margin-top: 12px;
+
+    .fact-block {
+        @media (max-width: 1023px) {
+            margin-top: 12px;
+        }
+    }
+}
+
+
+

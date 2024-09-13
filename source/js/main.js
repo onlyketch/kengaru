@@ -20,6 +20,14 @@ document.addEventListener('DOMContentLoaded', function() {
         smartSpeed: 500
     });
 
+    $(".slider-section__slider").owlCarousel({
+        margin: 0,
+        items: 1,
+        nav: true,
+        loop: true,
+        smartSpeed: 500
+    });
+
     Fancybox.bind("[data-fancybox]", {
         // Your custom options
     });

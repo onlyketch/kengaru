@@ -14,6 +14,13 @@
             padding-bottom: 20px;
             border-radius: 32px;
         }
+
+        &_another {
+            @media (max-width: 1023px) {
+                padding-top: 97px;
+                padding-bottom: 44px;
+            } 
+        }
     }
 
     &__title {

@@ -226,12 +226,32 @@
         }
     }
 
+    &__form-wrap {
+        display: flex;
+        align-items: center;
+        margin-top: 36px;
+    }
+
+    &__form-error {
+        visibility: hidden;
+        opacity: 0;
+        color: $red;
+        margin-left: 20px;
+
+        &.visible {
+            visibility: visible;
+            opacity: 1; 
+        }
+    }
+
+
+
     &__form-submit {
         display: block;
         border: none;
         background-color: $purple;
         color: #FFFFFF;
-        margin-top: 36px;
+        
     }
 
     &__close, &__success-close {

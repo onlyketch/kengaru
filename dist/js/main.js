@@ -352,6 +352,7 @@ document.addEventListener('DOMContentLoaded', function() {
      let reviewFormClose = document.querySelector('.reviews-form__close');
      let reviewFormSuccess = document.querySelector('.reviews-form__success');
      let reviewFormSuccessClose = document.querySelector('.reviews-form__success-close');
+     let reviewFormError = document.querySelector('.reviews-form__form-error');
      let reviewButtons = document.querySelectorAll('.review-button');
 
      if (reviewForm !== null) {
@@ -373,6 +374,8 @@ document.addEventListener('DOMContentLoaded', function() {
             reviewForm.classList.remove('show');    
             document.body.classList.remove('overflow-hidden');
             reviewForma.reset();
+            reviewFormError.classList.remove('visible');
+            reviewFormError.textContent = '';
         }, 500);
         
     });
@@ -393,6 +396,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     setTimeout(function() {
                         reviewFormBody.classList.remove('visible');
                         reviewForma.reset(); 
+                        reviewFormError.classList.remove('visible');
+                        reviewFormError.textContent = '';
                     }, 500);
 
                     reviewFormSuccess.classList.add('show');
@@ -400,6 +405,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
            
             });
+        } else if (reviewFormInputName.value == '' && reviewFormTextareaReview.value == '') {
+            reviewFormError.classList.add('visible');
+            reviewFormError.textContent = 'Введите имя и текст отзыва';
+        } else if (reviewFormInputName.value !== '' && reviewFormTextareaReview.value == '') {
+            reviewFormError.classList.add('visible');
+            reviewFormError.textContent = 'Введите текст отзыва';
+        } else if (reviewFormInputName.value == '' && reviewFormTextareaReview.value !== '') {
+            reviewFormError.classList.add('visible');
+            reviewFormError.textContent = 'Введите ваше имя'; 
         }
 
     });

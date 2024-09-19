@@ -490,6 +490,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
      }
 
+     // переключение цен на услуги по возрасту
+
+     let pricesSwitchers = document.querySelectorAll('.prices-switcher');
+
+     if (pricesSwitchers !== null) {
+        for (let i = 0; i < pricesSwitchers.length; i++) {
+            pricesSwitchers[i].addEventListener('click', function() {
+                for (let item of pricesSwitchers) {
+                    if (item.classList.contains('active')) item.classList.remove('active');
+                }
+                this.classList.add('active');
+            });
+        }
+     }
+
 
      
 

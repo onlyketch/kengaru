@@ -21,9 +21,10 @@
     }
 
     &__h2 {
+        display: inline-block;
         font-family: "Inter Semi Bold", Arial, Helvetica, sans-serif;
         font-size: 24px;
-        line-height: 24px;
+        line-height: 28px;
         font-weight: 600;
         color: $mainblack;
         margin: 52px 0 12px 0;

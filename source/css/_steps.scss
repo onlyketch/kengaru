@@ -1,0 +1,116 @@
+.steps {
+    position: relative;
+    z-index: 10;
+    margin-top: 12px;
+
+    &__wrapper {
+        background-color: #FDFDFD;
+        border-radius: 40px;
+        overflow: hidden;
+        padding-top: 36px;
+        padding-bottom: 78px;
+
+        @media (max-width: 500px) {
+            padding-top: 32px;
+            padding-bottom: 56px;
+            border-radius: 32px; 
+        }
+    }
+
+    &__title {
+        font-family: "Inter Medium", Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        line-height: 24px;
+        color: $purple;
+        font-weight: 500;
+        letter-spacing: -0.8px;
+        text-align: center;
+
+        @media (max-width: 500px) {
+            text-align: left;
+            font-size: 16px;
+            line-height: 20px;
+            margin-left: 28px;
+        }
+    }
+
+    &__items {
+        display: flex;
+        margin-top: 48px;
+
+
+        .owl-stage {
+            display: flex;
+
+            .owl-item {
+                width: 100%;
+                max-width: 359px;
+
+                @media (max-width: 500px) {
+                    max-width: 248px; 
+                }
+            }
+        }
+    }
+
+    &__item {
+        background-color: #FFFFFF;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.03);
+        border-radius: 32px;
+        padding: 36px 48px;
+        width: 100%;
+        max-width: 359px;
+        box-sizing: border-box;
+        user-select: none;
+
+        @media (max-width: 500px) {
+            max-width: 248px; 
+            padding: 36px 40px;
+        }
+    }
+
+    &__item-name {
+        font-family: "Inter Medium", Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        line-height: 20px;
+        color: $mainblack;
+        text-align: center;
+    }
+
+    &__item-image {
+        width: 156px;
+        height: 156px;
+        border-radius: 24px;
+        overflow: hidden;
+        margin: 28px auto 0 auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (max-width: 500px) {
+            width: 120px;
+            height: 120px;
+            margin: 20px auto 0 auto;
+        }
+    }
+
+    &__item-description {
+        font-size: 11px;
+        line-height: 14px;
+        color: $gray60;
+        text-align: center;
+        margin-top: 56px;
+
+        @media (max-width: 500px) {
+            margin-top: 20px;
+        }
+    }
+
+    .btn-large {
+        margin: 12px auto 0 auto;
+    }
+}
+

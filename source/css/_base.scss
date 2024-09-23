@@ -128,6 +128,11 @@ h2 {
         flex-direction: column;
         margin: 0;
     }
+
+    .blocks__vector h2 {
+        text-align: center;
+        margin-left: 0;
+    }
 }
 
 .focus-card {
@@ -178,7 +183,6 @@ h2 {
         font-weight: 500;
         color: $purple;
         margin-top: 20px;
-        //max-width: 340px;
 
         @media (max-width: 1023px) {
             font-size: 14px;
@@ -209,6 +213,38 @@ h2 {
     &:first-child {
         @media (max-width: 1023px) {
             margin: 0;
+        }
+    }
+}
+
+.focus-card_mod {
+    .focus-card__position {
+        text-align: center;
+    }
+
+    .focus-card__title {
+        font-size: 32px;
+        line-height: 38px;
+        letter-spacing: -0.64px;
+        text-align: center;
+        margin-top: 80px;
+
+        @media (max-width: 500px) {
+            font-size: 20px;
+            line-height: 24px; 
+            letter-spacing: -0.4px;
+            margin-top: 46px;
+        }
+    }
+
+    .focus-card__subtitle {
+        text-align: center;
+        margin-top: 80px;
+
+        @media (max-width: 500px) {
+            font-size: 14px;
+            line-height: 18px;
+            margin-top: 46px;
         }
     }
 }
@@ -428,5 +464,74 @@ h2 {
                 display: none;
             }
         }
+    }
+}
+
+.text-block {
+    position: relative;
+    z-index: 10;
+    margin-top: 12px;
+
+    &__wrapper {
+        background-color: #FDFDFD;
+        border-radius: 40px;
+        padding: 80px 24px;
+
+        @media (max-width: 500px) {
+            padding: 48px 24px;
+            border-radius: 32px;
+        }
+    }
+
+    &__content {
+        max-width: 732px;
+        margin: 0 auto;
+    }
+
+    &__title {
+        display: inline-block;
+        font-family: "Inter Semi Bold", Arial, Helvetica, sans-serif;
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: 600;
+        color: $mainblack;
+        margin: 52px 0 12px 0;
+
+        &:first-child {
+            margin: 0 0 12px 0;
+            
+            @media (max-width: 1023px) {
+                margin: 0 0 8px 0; 
+            }
+        }
+
+        @media (max-width: 1023px) {
+            margin: 44px 0 8px 0; 
+        }
+    }
+
+    &__p {
+        font-size: 16px;
+        line-height: 22px;
+        color: $mainblack;
+        margin: 16px 0;
+
+        &:first-child {
+            margin: 0 0 16px 0; 
+        }
+
+        &:last-child {
+            margin: 16px 0 0 0;
+        }
+
+        @media (max-width: 1023px) {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+
+    img {
+        width: 100%;
+        height: auto;
     }
 }

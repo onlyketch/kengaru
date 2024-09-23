@@ -12,6 +12,32 @@ document.addEventListener('DOMContentLoaded', function() {
         autoWidth: true,
     });
 
+    $(".steps__items").owlCarousel({
+        margin: 12,
+        items: 3,
+        nav: false,
+        center: true,
+        loop: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        responsive: {
+            0: {
+                items: 1,
+                center: true,
+                autoWidth: true
+            },
+            480: {
+                items: 2
+            },
+            768: {
+                items: 3,
+                autoWidth: false
+            }
+        }
+    });
+
     $(".security__slider").owlCarousel({
         margin: 0,
         items: 1,

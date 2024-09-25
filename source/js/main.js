@@ -54,6 +54,18 @@ document.addEventListener('DOMContentLoaded', function() {
         smartSpeed: 500
     });
 
+    $(".promo__items").owlCarousel({
+        margin: 0,
+        items: 1,
+        nav: true,
+        loop: true,
+        dots: false,
+        animateOut: 'fadeOut',
+        mouseDrag: false,
+        touchDrag: false,
+        autoWidth: false
+    });
+
     Fancybox.bind("[data-fancybox]", {
         // Your custom options
     });

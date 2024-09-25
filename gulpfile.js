@@ -43,7 +43,7 @@ gulp.task('img', function() {
 				quality: [0.65, 0.8]
 			}),
 			mozJPEG({
-				quality: 75
+				quality: 95
 			})
 		], {
 			verbose: true

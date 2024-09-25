@@ -51,6 +51,32 @@ h2 {
     padding: 0 16px;
 }
 
+.hero {
+    position: relative;
+    z-index: 20;
+
+    &__wrapper {
+        padding-top: 209px;
+        padding-bottom: 109px;
+        font-family: "Recoleta Medium", Arial, Helvetica, sans-serif;
+        color: $purple;
+    }
+
+    &__subtitle {
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 64px;
+        line-height: 64px;
+        max-width: 502px;
+        text-align: center;
+        margin: 20px auto 0 auto;
+    }
+}
+
 .top-gradient {
     position: absolute;
     top: 0;
@@ -69,6 +95,7 @@ h2 {
     border: 1px solid #F4F4F4;
     outline: none;
     appearance: none;
+    text-decoration: none;
     padding: 16px 24px;
     background-color: #FFFFFF;
     border-radius: 42px;
@@ -191,6 +218,39 @@ h2 {
         }
     }
 
+    &__doctor {
+        margin-top: 68px;
+
+        &-preview {
+            width: 142px;
+            height: 142px;
+            background-color: #E9E9E9;
+            border-radius: 36px;
+            overflow: hidden;
+            margin-bottom: 18px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &-name {
+            font-family: "Inter Medium", Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 500;
+            letter-spacing: -0.64px;
+            color: $purple;
+        }
+
+        &-position {
+            margin-top: 2px;
+            color: $gray60;
+        }
+    }
+
     &__btn-order {
         position: absolute;
         top: 36px;
@@ -246,6 +306,10 @@ h2 {
             line-height: 18px;
             margin-top: 46px;
         }
+    }
+
+    @media (max-width: 1023px) {
+        margin: 0;
     }
 }
 

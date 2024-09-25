@@ -64,7 +64,7 @@
         user-select: none;
 
         @media (max-width: 500px) {
-            max-width: 248px; 
+            min-width: 248px; 
             padding: 36px 40px;
         }
     }

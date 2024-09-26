@@ -57,15 +57,25 @@ h2 {
 
     &__wrapper {
         padding-top: 209px;
-        padding-bottom: 109px;
+        padding-bottom: 121px;
         font-family: "Recoleta Medium", Arial, Helvetica, sans-serif;
         color: $purple;
+
+        @media (max-width: 1023px) {
+            padding-top: 137px;
+            padding-bottom: 92px; 
+        }
     }
 
     &__subtitle {
         font-size: 24px;
         line-height: 28px;
         text-align: center;
+
+        @media (max-width: 1023px) {
+            font-size: 20px;
+            line-height: 28px;
+        }
     }
 
     &__title {
@@ -74,6 +84,12 @@ h2 {
         max-width: 502px;
         text-align: center;
         margin: 20px auto 0 auto;
+
+        @media (max-width: 1023px) {
+            font-size: 36px;
+            line-height: 36px;
+            margin: 16px auto 0 auto;
+        }
     }
 }
 
@@ -234,6 +250,13 @@ h2 {
                 height: 100%;
                 object-fit: cover;
             }
+
+            @media (max-width: 1023px) {
+                width: 84px;
+                height: 84px;
+                border-radius: 24px;
+                margin-bottom: 20px;
+            }
         }
 
         &-name {
@@ -243,11 +266,22 @@ h2 {
             font-weight: 500;
             letter-spacing: -0.64px;
             color: $purple;
+
+            @media (max-width: 1023px) {
+                font-size: 14px;
+                line-height: 18px;
+                letter-spacing: 0;
+            }
         }
 
         &-position {
             margin-top: 2px;
             color: $gray60;
+
+            @media (max-width: 1023px) {
+                font-size: 12px;
+                line-height: 16px;
+            }
         }
     }
 

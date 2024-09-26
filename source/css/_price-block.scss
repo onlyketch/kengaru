@@ -55,6 +55,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        text-decoration: none;
         box-sizing: border-box;
         padding: 16px 16px 32px 16px;
         border-top: 1px solid #E8E8E8;
@@ -66,6 +67,10 @@
             @media (max-width: 1023px) {
                 max-width: 138px;
                 flex-wrap: wrap;
+                
+                &.serv {
+                    max-width: 260px;
+                }
             }
 
             @media (max-width: 350px) {
@@ -103,9 +108,9 @@
             text-decoration: none;
             color: $purple;
             visibility: hidden;
-            
-            &:hover {
-                text-decoration: underline;
+
+            @media (max-width: 1023px) {
+                display: none;
             }
         }
 

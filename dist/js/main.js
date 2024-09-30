@@ -240,7 +240,6 @@ document.addEventListener('DOMContentLoaded', function() {
      orderInputPhone.addEventListener('input', function() {
         orderInputPhone.textContent = orderInputPhone.textContent.replace(/[A-Za-zА-Яа-яЁё]/, '');
         cursorPosition(orderInputPhone, false);
-        orderHiddenPhone.value = orderInputPhone.textContent;
         if (orderInputPhone.textContent.length > 12) {
             orderInputPhone.textContent = orderInputPhone.textContent.slice(0, -1);
             cursorPosition(orderInputPhone, false);
@@ -249,6 +248,7 @@ document.addEventListener('DOMContentLoaded', function() {
             orderInputPhone.textContent = '+7';
             cursorPosition(orderInputPhone, false);
         }
+        orderHiddenPhone.value = orderInputPhone.textContent;
      });
 
      orderInputPhone.addEventListener('focus', function() {

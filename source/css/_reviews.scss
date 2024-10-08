@@ -2,54 +2,44 @@
     margin-top: 12px;
 
     &__wrapper {
-        padding: 42px 48px;
+        padding: 0 12px;
         position: relative;
         background: #FDFDFD;
         backdrop-filter: blur(32px);
         border-radius: 40px;
         box-sizing: border-box;
-        min-height: 560px;
         z-index: 10;
         overflow: hidden;
 
         h2 {
             max-width: 120px;
             position: relative;
+            left: 48px;
+            top: 42px;
             z-index: 50;
 
             @media (max-width: 1023px) {
                 max-width: 183px;
+                left: 28px;
+                top: 32px;
+                margin-bottom: 32px;
             }
         }
 
         @media (max-width: 1023px) {
-            padding: 32px 28px;
+            padding: 0 12px;
             border-radius: 32px;
-            min-height: 594px;
-        }
-    }
-
-    &__wrapper-high {
-        min-height: 860px;
-
-        @media (max-width: 1023px) {
-            min-height: 594px;
         }
     }
 
     &__items {
-        position: absolute;
-        top: 0;
-        bottom: 0;
         padding-top: 30px;
-        padding-bottom: 30px;
-        left: 50%;
+        padding-bottom: 40px;
         max-width: 546px;
-        transform: translateX(-50%);
-        overflow: auto;
         -ms-overflow-style: none;
         scrollbar-width: none;
         z-index: -1;
+        margin: 0 auto;
 
         &::-webkit-scrollbar {
             -webkit-appearance: none !important;
@@ -61,45 +51,31 @@
 
         @media (max-width: 1023px) {
             max-width: 100%;
-            left: 12px;
-            right: 12px;
-            transform: translateX(0);
-            padding-top: 60px;
-            padding-bottom: 60px;
         }
 
-        &_another {
+        &-more {
+            display: block;
+            border: 1px solid #F4F4F4;
+            outline: none;
+            appearance: none;
+            border-radius: 42px;
+            font-family: "Inter Medium", Arial, Helvetica, sans-serif;
+            font-size: 10px;
+            line-height: 8px;
+            font-weight: 500;
+            color: #121214;
+            background-color: white;
+            padding: 16px 24px;
+            margin: 16px auto 0 auto;
+            cursor: pointer;
+
             @media (max-width: 1023px) {
-                padding-top: 20px;
-                padding-bottom: 20px; 
-            } 
+                margin: 36px auto 0 auto;
+            }
         }
 
         &.hidden {
             display: none;
-        }
-    }
-
-    &__scrim {
-        visibility: hidden;
-        position: fixed;
-        top: 0;
-        left: 50%;
-        width: 100%;
-        max-width: 546px;
-        transform: translateX(-50%);
-        height: 20%;
-        z-index: 40;
-        background: linear-gradient(180deg, #FDFDFD 48.22%, rgba(253, 253, 253, 0) 94.89%);
-        pointer-events: none;
-
-        @media (max-width: 1023px) {
-            visibility: visible;
-            height: 111px;
-            left: 0;
-            right: 0;
-            transform: translateX(0%);
-            border-radius: 32px;
         }
     }
 
@@ -111,12 +87,32 @@
         padding: 20px;
         box-sizing: border-box;
         margin-top: 16px;
-        max-height: 124px;
+        max-height: 130px;
         overflow: hidden;
         cursor: pointer;
         user-select: none;
         transition: all .5s ease-out, outline .3s ease-out, background-color .1s ease-out;
         z-index: 20;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &-info {
+            position: relative;
+
+            &::before {
+                content: 'Подробнее';
+                font-family: "Inter", Arial, Helvetica, sans-serif;
+                font-size: 10px;
+                line-height: 12px;
+                color: $purple;
+                font-weight: 400;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            }
+        }
 
         &:hover {
             background-color: #F7F7F7;
@@ -253,8 +249,13 @@
             color: #FFFFFF;
         }
 
+        &.active &-info::before {
+            visibility: hidden;
+        }
+
         @media (max-width: 358px) {
             max-height: 150px;
+            padding: 14px;
         }
 
     }
@@ -262,6 +263,8 @@
     
 
     .btn-large {
-        margin: 12px auto 0 auto;
+        position: relative;
+        z-index: 10;
+        margin: 12px auto;
     }
 }

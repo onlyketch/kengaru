@@ -52,6 +52,7 @@
         font-family: "Inter Medium", Arial, Helvetica, sans-serif;
         font-size: 14px;
         line-height: 20px;
+        color: $mainblack;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -120,6 +121,22 @@
             border-radius: 8px;
         }
 
+        &:hover .price-block__item-price-old,
+        &:hover .price-block__item-price-val {
+            display: none !important;
+        }
+
+        &:hover .price-block__item-price-val {
+            @media (max-width: 1023px) {
+                display: block !important;
+            }
+        }
+
+        &:hover .price-block__item-price-more {
+            display: block;
+        }
+
+
         &:hover .price-block__item-more {
             visibility: visible;
         }
@@ -131,6 +148,12 @@
         &:hover + .price-block__item {
             border-top: 1px solid transparent;
         }
+
+        &:hover .price-block__item-service,
+        &:hover .price-block__item-price-count {
+            color: $purple;
+        }
+
 
         &.promo &-name,
         &.promo .price-block__item-price {
@@ -153,6 +176,17 @@
         }
     }
 
+    &__item-service {
+        @media (max-width: 1023px) {
+            max-width: 138px;
+        }
+        
+        @media (max-width: 350px) {
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+
     &__item-price {
         display: flex;
 
@@ -167,10 +201,47 @@
             }
         }
 
+        &-more {
+            color: $purple;
+            display: none;
+
+            @media (max-width: 1023px) {
+                display: block;
+                font-size: 12px;
+                line-height: 12px;
+                margin-top: 14px;
+            }
+        }
+
+        @media (max-width: 1023px) {
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
         @media (max-width: 350px) {
             font-size: 12px;
             line-height: 18px;
         }
+    }
+
+    &__btn {
+        display: block;
+        max-width: 165px;
+        box-sizing: border-box;
+        border: none;
+        background-color: $purple;
+        color: white;
+        text-align: center;
+        margin: 16px auto 0 auto;
+        white-space: nowrap;
+
+        @media (max-width: 1023px) {
+            max-width: 150px;
+        }
+    }
+
+    .btn-large {
+        margin: 12px auto 0 auto;
     }
 }
 

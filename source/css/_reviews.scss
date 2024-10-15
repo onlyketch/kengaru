@@ -11,6 +11,12 @@
         z-index: 10;
         overflow: hidden;
 
+        #reviews-clinic {
+            @media (max-width: 1023px) {
+                padding-top: 40px;
+            }
+        }
+
         h2 {
             max-width: 120px;
             padding-bottom: 26px;
